@@ -11,6 +11,7 @@ $(document).ready(init);
   function init(){
   setTimeout( window.scrollTo(0,1),1);
   console.log(start);
+  console.log("zware test");
 
  	console.log("Dom Loaded!");
   $('#container .zintuig').click(navigate);
