@@ -1,5 +1,5 @@
 <?php
-    require_once 'Smarty.class.php';
+    require_once 'smarty/Smarty.class.php';
 
 class AppController
 {

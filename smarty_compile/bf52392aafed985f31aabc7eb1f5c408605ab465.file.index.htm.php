@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2013-03-26 23:51:23
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 13:34:45
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:999711009515069015b8a53-18369328%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364338277,
+      1 => 1364383680,
       2 => 'file',
     ),
   ),
@@ -15,7 +15,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.12',
+  'version' => 'Smarty-3.1.8',
   'unifunc' => 'content_515069015de049_53017115',
   'variables' => 
   array (
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <meta name = "viewport" content = "initial-scale = 1.0,user-scalable = no"/>
 
     
-    <title>Lovely Oostende</title>
+    <title>Lovely Oostende Jonas</title>
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
