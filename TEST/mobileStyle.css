@@ -1,24 +1,28 @@
 *{
 	margin: 0;
 	padding: 0;
-	background-color: #2a2b3c;
-	
 }
 
-#Firstcontainer{
-	color: #fbffd1;
-	font-size: 26px; /* 26 pixels is 1em = 100% */
+body{
+		background-color: #2a2b3c;
+		font-family: 'Maven Pro', sans-serif;
+		color: #faffd1;
+
+}
+
+#Firstcontainer , #maakVerrasContainer{
+	font-size: 16px; /* 26 pixels is 1em = 100% */
 	height: 100%;
 	font-family: 'Maven Pro', sans-serif;
 	font-weight: 400;
-	margin-top: 10%; 
 }
 
 h1{
 	font-size: 1.618em; /* 26 * 1.618 = 42.068 */
 	margin: auto;
 	text-align: center;
-	margin: 5%;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 .btn{
@@ -32,11 +36,13 @@ h1{
     -khtml-border-radius: 10px;
     border-radius: 10px;
 	text-transform: uppercase;
-	font-size: 0.618em; /* 26 * 1.618 = 42.068 */
+	font-size: 1.018em; /* 26 * 1.618 = 42.068 */
 	text-align: center;
 	padding: 20px 0.65px 20px 0.65px;
 	font-weight: 700;
 	letter-spacing: 0.1em;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 /*BUTTONS*/
@@ -44,31 +50,94 @@ h1{
 	width: 60%;
 }
 
-p{
-	margin: 3%;
+.miniBtn{
+	width: 45%;
+	height: 2%;
+	display: inline-block;
+
+	background-color: #ff5f48;
+     -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+	text-transform: uppercase;
+	font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+	text-align: center;
+	font-weight: 700;
+	letter-spacing: 0.1em;
+	
+	padding: 15px 0.65px 15px 0.65px;
+	
+	margin-top: 5%;
+	margin-bottom: 5%;
+	margin-left: 3%;
+}
+
+#Firstcontainer , #maakVerrasContainer p{	
 	text-align: center;
 }
-
-.test{
-	font-size: 1em;
-	width: 100%;
-	height: 112px;
-	position: absolute;
-	background-color: #00FF00;
-	z-index: 10000;
-	display: block;
-}
-
-
-
-
-
-
-
-
-
-
 
 p span{
 	font-weight: 700;
 }
+
+/*START PAGE*/
+
+
+.menuBar{
+	height: 65px;
+	width: 100%;
+	display: inline-block;
+}
+	.info{
+			width: 22%;
+			height: 100%;
+			display: inline-block;
+			border-right: #454656 1px solid;
+		}
+
+		.title{
+			width: 53%;
+			height: 100%;
+			border-right: #454656 1px solid;
+			display: inline-block;
+		}
+
+		.dagtripIcon{
+			width: 22%;
+			height: 100%;
+			display: inline-block;
+		}
+
+
+
+.infoBar{
+	width: 90%;
+	height: 145px;
+	background-color: #454656;
+	display: inline-block;
+	padding: 5%;
+	color: #faffd1;
+}
+
+
+.buildings{
+	width: 100%;
+	height: 142px;
+	display: inline-block;
+	background-image: url("buildings.png");
+}
+/*END STARTPAGE*/
+
+.smallP{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+
+
+
+
+
+
