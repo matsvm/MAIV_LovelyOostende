@@ -1,0 +1,44 @@
+$tweenspeed:0.4s;
+
+@import "compass/css3/images";
+*{
+  margin:0;
+  padding:0;
+}
+ul li{
+	display: inline;
+}
+#subContent{
+	white-space:nowrap;
+	overflow:scroll;
+	background-color: #dddddd;
+	height:100px;
+}
+
+#infoContent{
+	margin-top:0px;
+	height:150px;
+	background-color: blue;
+	transition: all $tweenspeed;
+	-moz-transition: all $tweenspeed; /* Firefox 4 */
+	-webkit-transition: all $tweenspeed; /* Safari and Chrome */
+	-o-transition: all $tweenspeed; /* Opera */
+}
+#infoContent.verborgen{
+	margin-top:-150px;
+
+	transition: all $tweenspeed;
+	-moz-transition: all $tweenspeed; /* Firefox 4 */
+	-webkit-transition: all $tweenspeed; /* Safari and Chrome */
+	-o-transition: all $tweenspeed; /* Opera */
+}
+
+.venue{
+	width:110px;
+	height:100px;
+	background-color: red;
+	margin-left:0px;
+	display:inline-block;
+
+
+}

@@ -1,0 +1,53 @@
+/* line 4, ../sass/custom.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../sass/custom.scss */
+ul li {
+  display: inline;
+}
+
+/* line 11, ../sass/custom.scss */
+#subContent {
+  white-space: nowrap;
+  overflow: scroll;
+  background-color: #dddddd;
+  height: 100px;
+}
+
+/* line 18, ../sass/custom.scss */
+#infoContent {
+  margin-top: 0px;
+  height: 150px;
+  background-color: blue;
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.4s;
+  /* Safari and Chrome */
+  -o-transition: all 0.4s;
+  /* Opera */
+}
+
+/* line 27, ../sass/custom.scss */
+#infoContent.verborgen {
+  margin-top: -150px;
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.4s;
+  /* Safari and Chrome */
+  -o-transition: all 0.4s;
+  /* Opera */
+}
+
+/* line 36, ../sass/custom.scss */
+.venue {
+  width: 110px;
+  height: 100px;
+  background-color: red;
+  margin-left: 0px;
+  display: inline-block;
+}
