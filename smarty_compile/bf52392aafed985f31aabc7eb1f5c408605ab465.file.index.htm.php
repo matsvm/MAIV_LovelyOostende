@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 13:34:45
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 14:30:56
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:999711009515069015b8a53-18369328%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364383680,
+      1 => 1364390400,
       2 => 'file',
     ),
   ),
@@ -42,6 +42,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!--<link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen and (max-width:320px) and (max-width:480px)" />-->
 
      <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
+    <link href="mobileStyle.css" rel="stylesheet" type="text/css" media="screen"/>
 
 
 </head>
@@ -66,19 +67,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </ul>
 
    
-   <p>Meh selfies squid sunt, shoreditch thundercats cardigan mixtape salvia selvage organic artisan ethnic pitchfork small batch. Beard street art keytar reprehenderit sustainable delectus. Locavore sartorial ethnic labore neutra, irony vero culpa odd future butcher authentic banjo forage brooklyn. 8-bit tumblr sriracha whatever. Sunt tempor salvia, hella scenester tofu odio typewriter consectetur neutra adipisicing quinoa blog semiotics banh mi. Proident non labore, anim 90's single-origin coffee cillum intelligentsia DIY aesthetic ethical post-ironic +1. Yr next level ethnic, ugh deserunt retro esse butcher single-origin coffee anim.
-
-Pitchfork pour-over brooklyn intelligentsia, salvia cardigan ugh high life 8-bit craft beer nostrud leggings sed. Delectus incididunt mixtape sustainable. Try-hard eu art party yr laborum, cray flannel trust fund ennui locavore photo booth stumptown mcsweeney's nostrud. Butcher ennui marfa, culpa intelligentsia carles aliquip authentic post-ironic anim tattooed ugh narwhal. Messenger bag elit sapiente, banksy delectus raw denim small batch lo-fi veniam. Forage Austin do, ea qui</p><p>Meh selfies squid sunt, shoreditch thundercats cardigan mixtape salvia selvage organic artisan ethnic pitchfork small batch. Beard street art keytar reprehenderit sustainable delectus. Locavore sartorial ethnic labore neutra, irony vero culpa odd future butcher authentic banjo forage brooklyn. 8-bit tumblr sriracha whatever. Sunt tempor salvia, hella scenester tofu odio typewriter consectetur neutra adipisicing quinoa blog semiotics banh mi. Proident non labore, anim 90's single-origin coffee cillum intelligentsia DIY aesthetic ethical post-ironic +1. Yr next level ethnic, ugh deserunt retro esse butcher single-origin coffee anim.
-
-Pitchfork pour-over brooklyn intelligentsia, salvia cardigan ugh high life 8-bit craft beer nostrud leggings sed. Delectus incididunt mixtape sustainable. Try-hard eu art party yr laborum, cray flannel trust fund ennui locavore photo booth stumptown mcsweeney's nostrud. Butcher ennui marfa, culpa intelligentsia carles aliquip authentic post-ironic anim tattooed ugh narwhal. Messenger bag elit sapiente, banksy delectus raw denim small batch lo-fi veniam. Forage Austin do, ea qui</p><p>Meh selfies squid sunt, shoreditch thundercats cardigan mixtape salvia selvage organic artisan ethnic pitchfork small batch. Beard street art keytar reprehenderit sustainable delectus. Locavore sartorial ethnic labore neutra, irony vero culpa odd future butcher authentic banjo forage brooklyn. 8-bit tumblr sriracha whatever. Sunt tempor salvia, hella scenester tofu odio typewriter consectetur neutra adipisicing quinoa blog semiotics banh mi. Proident non labore, anim 90's single-origin coffee cillum intelligentsia DIY aesthetic ethical post-ironic +1. Yr next level ethnic, ugh deserunt retro esse butcher single-origin coffee anim.
-
-Pitchfork pour-over brooklyn intelligentsia, salvia cardigan ugh high life 8-bit craft beer nostrud leggings sed. Delectus incididunt mixtape sustainable. Try-hard eu art party yr laborum, cray flannel trust fund ennui locavore photo booth stumptown mcsweeney's nostrud. Butcher ennui marfa, culpa intelligentsia carles aliquip authentic post-ironic anim tattooed ugh narwhal. Messenger bag elit sapiente, banksy delectus raw denim small batch lo-fi veniam. Forage Austin do, ea qui</p><p>Meh selfies squid sunt, shoreditch thundercats cardigan mixtape salvia selvage organic artisan ethnic pitchfork small batch. Beard street art keytar reprehenderit sustainable delectus. Locavore sartorial ethnic labore neutra, irony vero culpa odd future butcher authentic banjo forage brooklyn. 8-bit tumblr sriracha whatever. Sunt tempor salvia, hella scenester tofu odio typewriter consectetur neutra adipisicing quinoa blog semiotics banh mi. Proident non labore, anim 90's single-origin coffee cillum intelligentsia DIY aesthetic ethical post-ironic +1. Yr next level ethnic, ugh deserunt retro esse butcher single-origin coffee anim.
-
-Pitchfork pour-over brooklyn intelligentsia, salvia cardigan ugh high life 8-bit craft beer nostrud leggings sed. Delectus incididunt mixtape sustainable. Try-hard eu art party yr laborum, cray flannel trust fund ennui locavore photo booth stumptown mcsweeney's nostrud. Butcher ennui marfa, culpa intelligentsia carles aliquip authentic post-ironic anim tattooed ugh narwhal. Messenger bag elit sapiente, banksy delectus raw denim small batch lo-fi veniam. Forage Austin do, ea qui</p><p>Meh selfies squid sunt, shoreditch thundercats cardigan mixtape salvia selvage organic artisan ethnic pitchfork small batch. Beard street art keytar reprehenderit sustainable delectus. Locavore sartorial ethnic labore neutra, irony vero culpa odd future butcher authentic banjo forage brooklyn. 8-bit tumblr sriracha whatever. Sunt tempor salvia, hella scenester tofu odio typewriter consectetur neutra adipisicing quinoa blog semiotics banh mi. Proident non labore, anim 90's single-origin coffee cillum intelligentsia DIY aesthetic ethical post-ironic +1. Yr next level ethnic, ugh deserunt retro esse butcher single-origin coffee anim.
-
-Pitchfork pour-over brooklyn intelligentsia, salvia cardigan ugh high life 8-bit craft beer nostrud leggings sed. Delectus incididunt mixtape sustainable. Try-hard eu art party yr laborum, cray flannel trust fund ennui locavore photo booth stumptown mcsweeney's nostrud. Butcher ennui marfa, culpa intelligentsia carles aliquip authentic post-ironic anim tattooed ugh narwhal. Messenger bag elit sapiente, banksy delectus raw denim small batch lo-fi veniam. Forage Austin do, ea qui</p><p>Meh selfies squid sunt, shoreditch thundercats cardigan mixtape salvia selvage organic artisan ethnic pitchfork small batch. Beard street art keytar reprehenderit sustainable delectus. Locavore sartorial ethnic labore neutra, irony vero culpa odd future butcher authentic banjo forage brooklyn. 8-bit tumblr sriracha whatever. Sunt tempor salvia, hella scenester tofu odio typewriter consectetur neutra adipisicing quinoa blog semiotics banh mi. Proident non labore, anim 90's single-origin coffee cillum intelligentsia DIY aesthetic ethical post-ironic +1. Yr next level ethnic, ugh deserunt retro esse butcher single-origin coffee anim.
-
-Pitchfork pour-over brooklyn intelligentsia, salvia cardigan ugh high life 8-bit craft beer nostrud leggings sed. Delectus incididunt mixtape sustainable. Try-hard eu art party yr laborum, cray flannel trust fund ennui locavore photo booth stumptown mcsweeney's nostrud. Butcher ennui marfa, culpa intelligentsia carles aliquip authentic post-ironic anim tattooed ugh narwhal. Messenger bag elit sapiente, banksy delectus raw denim small batch lo-fi veniam. Forage Austin do, ea qui</p>
+   
 </div>
 </body>
 </html>

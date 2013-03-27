@@ -1,0 +1,14 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#Firstcontainer{
+	background-color: #2a2b3c;
+	color: #fbffd1;
+	font-size: 26px; /* 26 pixels is 1em = 100% */
+}
+
+h1{
+	font-size: 1.618em; /* 26 * 1.618 = 42.068 */
+}
