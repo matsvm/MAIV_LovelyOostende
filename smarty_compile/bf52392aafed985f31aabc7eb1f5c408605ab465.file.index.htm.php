@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 14:30:56
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 15:22:17
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:999711009515069015b8a53-18369328%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364390400,
+      1 => 1364394077,
       2 => 'file',
     ),
   ),
@@ -42,7 +42,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!--<link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen and (max-width:320px) and (max-width:480px)" />-->
 
      <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
-    <link href="mobileStyle.css" rel="stylesheet" type="text/css" media="screen"/>
 
 
 </head>
