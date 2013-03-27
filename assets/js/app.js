@@ -11,9 +11,8 @@ $(document).ready(init);
   function init(){
   setTimeout( window.scrollTo(0,1),1);
   console.log(start);
-  console.log("zware test");
 
- 	console.log("Dom Loaded!");
+  console.log("Dom Loaded!");
   $('#container .zintuig').click(navigate);
   if(localStorage.getItem('favorites')){
 
@@ -155,25 +154,25 @@ function navigate(){
       venueArray= new Array();
       
     }
-  	var key =0;
-  	//console.log(this.text);
+    var key =0;
+    //console.log(this.text);
 
-  	switch(this.text){
-  		case "Proeven":
-  			key =1;
-  			break;
-  		case "Zien":
-  			key = 2;
-  		break;
-  		case "Ruiken":
-  			key = 3;
-  		break;
-  		case "Voelen":
-  			key = 4;
-  		break;
-  		case "Horen":
-  			key = 5;
-  		break;
+    switch(this.text){
+      case "Proeven":
+        key =1;
+        break;
+      case "Zien":
+        key = 2;
+      break;
+      case "Ruiken":
+        key = 3;
+      break;
+      case "Voelen":
+        key = 4;
+      break;
+      case "Horen":
+        key = 5;
+      break;
       
 
       }
@@ -200,28 +199,28 @@ function navigate(){
     }
   }
 
-      	
+        
 
 
 function clickVenuehandler(){
-	$("#infoContent").empty();
-	var currentVenue = $(this).find('h3').text();
-	//console.log($(this).text());
-	if($("#infoContent").hasClass("verborgen")){
-		$("#infoContent").removeClass("verborgen");
+  $("#infoContent").empty();
+  var currentVenue = $(this).find('h3').text();
+  //console.log($(this).text());
+  if($("#infoContent").hasClass("verborgen")){
+    $("#infoContent").removeClass("verborgen");
 
-		console.log("Show");
-	}
-	var element = null;
-	for (var i = 0; i < currentVenues.length; i++) {
-  		element = currentVenues[i];
-  		console.log(currentVenue);
-  		if(element.name==currentVenue){
-  			console.log("Found it!");
-  			selectedVenue = element;
+    console.log("Show");
+  }
+  var element = null;
+  for (var i = 0; i < currentVenues.length; i++) {
+      element = currentVenues[i];
+      console.log(currentVenue);
+      if(element.name==currentVenue){
+        console.log("Found it!");
+        selectedVenue = element;
 
         /*var item ="<div class='gebouw'><h3>"+element.name+"</h3> <p>"+element.description+"</p> <p>"+element.adress+"</p> "+
-        "<a href='https://maps.google.be/maps?q=+"+element.lat+"+"+element.long+"'><div id='map_canvas"+element.name+"' style='width:400px; height:400px;'></div></a>"+
+        "<a href='https://maps.google.be/maps?q=+"+element.lat+"+"+element.long+"'></a>"+
       "<a id='likeKlik"+element.id+"' href='index.php?page=vote&value="+element.id+"'>like</a>"+
 
         "</div>";
@@ -242,27 +241,57 @@ function clickVenuehandler(){
           title:"Hello World!"
         })*/
 
-  			var item= "<span><h3>"+element.name+"</h3><p>"+element.description+"</p>"+
+        var item= "<span><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p>"+
         "<a id='likeKlik"+element.id+"' href='index.php?page=vote&value="+element.id+"'>Add To List</a>"+
 
           "</span>";
           $("#infoContent").append(item);
         $("#likeKlik"+element.id).click(likeKlik);
+        $(".showDetail").click(showDetailPage);
 
 
-  		}else{
-  			//console.log("Wrong");
-  		}
-  		// Do something with element i.
-		
-	}
+      }else{
+        //console.log("Wrong");
+      }
+      // Do something with element i.
+    
+  }
 
+  }
 
-	}
+function showDetailPage(){
+  console.log("Click on title");
+  var item="<div class='detailPage' style='position:absolute; background-color:red;'><span id='vorige'>Terug</span> <h3>"+selectedVenue.name+" </h3> <p>"+selectedVenue.description+"</p>"+
+  "<div id='map_canvas"+selectedVenue.name+"' style='width:400px; height:400px;'></div> </div>";
+  $("body").prepend(item);
+  $("#vorige").click(function(){
+    console.log("removeDetailPage");
+    $(this).parent().remove();
+  })
+  var myLatlng = new google.maps.LatLng(selectedVenue.lat, selectedVenue.long);
+  var myOptions = {
+      zoom: 15,
+      center: myLatlng,
+      draggable:false,
+      disableDefaultUI:true,
+      zoomControl:false,
+      scaleControl:false,
+      scrollwheel: false,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
 
+  var map = new google.maps.Map(document.getElementById("map_canvas"+selectedVenue.name),myOptions);
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    icon: "assets/images/marker.png",
+    title:"Hello World!"
+  })
+
+}
 
 function likeKlik(e){
-	//console.log($(this).attr('href'));
+  //console.log($(this).attr('href'));
   console.log(selectedVenue);
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   console.log(favorites.length);
@@ -283,12 +312,9 @@ function likeKlik(e){
       console.log("Het zit er nog niet in, maar het zit al vol");
     }
   }
-  
-  
-  //console.log(favorites);
-
   localStorage.setItem('favorites',JSON.stringify(favorites));
   console.log(JSON.parse(localStorage.getItem('favorites')));
 
-	return false;
+  return false;
 }
+  
