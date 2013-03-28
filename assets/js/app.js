@@ -9,10 +9,10 @@ var maxVerganeTijd = 86400;
 var selectedVenue;
 $(document).ready(init);
   function init(){
-  setTimeout( window.scrollTo(0,5),1);
-  console.log(start);
-  updateDagTripCount();
   console.log("Dom Loaded!");
+
+  setTimeout( window.scrollTo(0,10),1);
+  console.log(start);
   $('#container .zintuig').click(navigate);
   $(".dagtripIcon").click(showDagTrip);
   if(localStorage.getItem('favorites')){
@@ -33,8 +33,11 @@ $(document).ready(init);
   }else{
     getNewVenues();
     
-          }
-        };
+  }
+//createRandomDagTrip();
+  updateDagTripCount();
+
+};
     
   function getNewVenues(){
   localStorage.setItem('lastTime',(new Date().getTime())/1000)
@@ -59,8 +62,59 @@ $(document).ready(init);
       })
   }
 
+function createRandomDagTrip(){
+  var randomDagTrip = new Array();
+  var allProeven = new Array();
+  var allDeRest = new Array();
 
+  for(var j=0;j<allVenues.length;j++){
+    var element = allVenues[j];
+    if(element.cat !=1){
+      allDeRest.push(element);
+    }else{
+      allProeven.push(element);
+    }
+  }
+  //console.log(allProeven);
+  //console.log(allDeRest);
+ 
+  while(randomDagTrip.length < 5){
+    if(randomDagTrip.length%2){
+      console.log("OnEven: "+randomDagTrip.length)
+      var randomnumber=Math.ceil(Math.random()*allDeRest.length);
+      var found=false;
+      for(var i=0;i<randomDagTrip.length;i++){
+        if(randomDagTrip[i]==randomnumber){found=true;break}
+      }
+      if(!found&&allDeRest[randomnumber]!=undefined){
+        //console.log(allDeRest[randomnumber]);
+        randomDagTrip[randomDagTrip.length]=allDeRest[randomnumber];
+        
+      }
+    }else{
+      console.log("Even: "+randomDagTrip.length)
+      var randomnumber=Math.ceil(Math.random()*allProeven.length);
+      var found=false;
+      for(var i=0;i<randomDagTrip.length;i++){
+        if(randomDagTrip[i]==randomnumber){found=true;break}
+      }
+      if(!found&&allProeven[randomnumber]!=undefined){
+        randomDagTrip[randomDagTrip.length]=allProeven[randomnumber];
+        //console.log(allProeven[randomnumber]);
+
+      }
+    }
+    
+  }
+  console.log(randomDagTrip);
+
+
+
+  //localStorage.setItem('favorites',JSON.stringify(randomDagTrip));
+
+}
 function berekenDichtsteVenue(){
+  console.log("Get closest venues")
   currentVenues = new Array();
   var current=navigator.geolocation.getCurrentPosition(getCoordinaten);
   
@@ -85,6 +139,7 @@ function berekenDichtsteVenue(){
       unitSystem:google.maps.UnitSystem.METRIC
     }, callback);
   }
+
 }
 
 function callback(response, status) {
@@ -121,6 +176,7 @@ function callback(response, status) {
 
 function changeDisplay(){
   $('#subContent').empty();
+  
   var itemke = '<div class="infoBarI">Kies een attractie hieronder om deze toe te voegen.</div>'+
               '<div class="infoBarII">Je kan de attracties filteren per zintuig of per huidige locatie</div>';
   $('#infoContent').append(itemke);         
@@ -144,6 +200,7 @@ function changeDisplay(){
 
         
     }
+    return false;
   }
 
 
@@ -153,6 +210,7 @@ function navigate(){
 
     return false;
   }else{
+    
     $("#infoContent").empty();
     currentZintuig=$(this).text()
     if($("#infoContent").hasClass("verborgen")){
@@ -164,7 +222,7 @@ function navigate(){
     }
     var key =0;
     //console.log(this.text);
-
+    console.log($(this));
     switch($(this).text()){
       case "Proeven":
         key =1;
@@ -243,6 +301,8 @@ function clickVenuehandler(){
             $("#likeKlik"+element.id).click(likeKlik);
            }else{
             console.log("favorites vol");
+            item += "<div class='infoBarV'><div class='Minibutten'>Dagtrip is volledig</div></div>";
+
             $("#infoContent").append(item);
            } 
         }
@@ -274,10 +334,7 @@ function favorietVerwijderen(){
 }
 function showDetailPage(){
   console.log("Click on title");
-
-
-
-  var item="<div class='detailPage' style='background-color:#525263;position:absolute; margin-top:55px;'>"+
+  var item="<div class='detailPage' style='background-color:#525263;position:absolute; margin-top:66px;'>"+
   "<div class='overzicht'>"+
             "<div class='infoBarIV'>"+
                     "<h2>"+selectedVenue.name+"</h2>"+
@@ -323,6 +380,8 @@ function showDetailPage(){
           });
            }else{
             console.log("favorites vol");
+            item += "<div class='infoBarV'><div class='Minibutten'>Dagtrip is volledig</div></div>";
+
            $("body").prepend(item);
            } 
         }
@@ -367,7 +426,7 @@ function likeKlik(){
   
   favorites.push(selectedVenue);
   localStorage.setItem('favorites',JSON.stringify(favorites));
-  var item="<div style='position:absolute; background-color:#2a2b3c; z-index:5;margin-top:65px;'><div id='popUp'>"+
+  var item="<div style='position:absolute; background-color:#2a2b3c; z-index:5;margin-top:66px;'><div id='popUp'>"+
   "<h1>Geslijm geslijm</h1> <p>Je hebt "+selectedVenue.name+" toegevoegd aan je dagtrip. Mooie keuze!</p>"+
   "<div class='roundedPopup roundedPopupMini'><p>AANRADER</p></div>"+
         "<div class='roundedPopup'><p>Als koppel moet je zeker eens het uitzicht bewonderen bij zonsondergang!</p></div>"+
@@ -394,11 +453,51 @@ function updateDagTripCount(){
   count = favorites.length;
   console.log(count);
   $(".dagtripIcon span").text(count);
-  }
+
+  if(selectedVenue){
+    console.log("change Button");
+    var infoBarV = $(".infoBarV");
+    console.log(infoBarV);
+
+    infoBarV.empty();
+        console.log(infoBarV);
+
+    var newButton;
+    var inList=false;
+    for(var j =0;j<favorites.length;j++){
+      var elementje = favorites[j];
+      if(selectedVenue.name == elementje.name){
+        inList = true;
+        }
+      }
+    if(inList==true){
+      console.log("[Change Button] De plaats zit er reeds in");
+      newButton = "<div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>-verwijderen uit dagtrip</div>";
+      infoBarV.append(newButton);
+
+      $("#likeDetailKlik"+selectedVenue.id).click(favorietVerwijderen);
+    }else{
+        console.log("[Change Button] De plaats zit er nog niet in");
+
+        newButton = "<div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>+ toevoegen aan dagtrip</div>";
+        infoBarV.append(newButton);
+
+       $("#likeDetailKlik"+selectedVenue.id).click(function(){
+        //$(this).parent().remove();
+            console.log("removeDetailPage");
+
+        likeKlik();
+        return false;
+      });
+    }
+
+    
+    }
+ }
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:65px; background-color:#2a2b3c;width:100%;height:100% '>";
+  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:66px; background-color:#2a2b3c;width:100%;height:100% '>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   
