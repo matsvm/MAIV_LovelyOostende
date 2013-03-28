@@ -1,27 +1,382 @@
-/* line 4, ../sass/custom.scss */
-* {
+*{
   margin: 0;
   padding: 0;
 }
 
-/* line 8, ../sass/custom.scss */
-ul li {
-  display: inline;
+body{
+    background-color: #2a2b3c;
+    font-family: 'Maven Pro', sans-serif;
+    color: #faffd1;
 }
+
+.tussen{
+  width: 100%;
+  height: 200px;
+  margin-top:5%;
+}
+
+#Firstcontainer , #maakVerrasContainer p{ 
+  text-align: center;
+}
+
+p span{
+  font-weight: 700;
+}
+
+.smallP{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* ALGEMEEN */
+#Firstcontainer , #maakVerrasContainer , #popUp{
+  font-size: 16px; /* 26 pixels is 1em = 100% */
+  height: 100%;
+  font-family: 'Maven Pro', sans-serif;
+  font-weight: 400;
+}
+
+h1{
+  font-size: 1.618em; /* 26 * 1.618 = 42.068 */
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.btn{
+  margin: auto;
+  width: 85%;
+  max-width: 400px;
+  height: 30%;
+  background-color: #ff5f48;
+     -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+  text-align: center;
+  padding: 20px 0.65px 20px 0.65px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.Minibutten{
+  margin: auto;
+  width: 85%;
+  max-width: 350px;
+  height: 18%;
+  background-color: #ff5f48;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+  text-align: center;
+  padding: 12px 0.65px 12px 0.65px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+/*BUTTONS*/
+.small{
+  width: 60%;
+}
+
+.miniBtn{
+  width: 45%;
+  height: 2%;
+  display: inline-block;
+
+  background-color: #ff5f48;
+     -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  
+  padding: 15px 0.65px 15px 0.65px;
+  
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 3%;
+}
+
+/*END BUTTONS*/
+
+/*START PAGE*/
+
+.menuBar{
+  height: 55px;
+  width: 100%;
+  display: inline-block;
+}
+    .info{
+      width: 22%;
+      height: 100%;
+      border-right: #454656 1px solid;
+      display: inline-block;
+      font-family: "susaRegular";
+      font-size: 1.318em;
+      line-height: 10px;
+      text-align: center;
+    }
+
+    .title{
+      width: 53%;
+      height: 100%;
+      border-right: #454656 1px solid;
+      display: inline-block;
+      font-family: "susaRegular";
+      font-size: 1.318em;
+
+      line-height: 10px;
+      text-align: center;
+    }
+
+    .dagtripIcon{
+      width: 20%;
+      height: 100%;
+      display: inline-block;
+      font-family: "susaRegular";
+      text-align: center;
+
+      background-image: url("../images/dagTripIconBig.png");
+      background-repeat: no-repeat;
+      background-size: 60px;
+    }
+
+/*BEGIN DAGTRIP*/
+.dagtripItem{
+  border-bottom: #454656 2px solid;
+  width: 100%;
+  height: 85px;
+}
+    .dagtripIcontje{
+      width: 20%;
+      height: 85px;
+      float: left;
+      display: inline-block;  
+      line-height: 20px;
+      background-color: #ffd597;
+    }
+    .dagtripTitel{
+      width: 50%;
+      height: 85px;
+      display: inline-block;
+      float: left;  
+      margin-left: 8%;  
+      line-height: 20px;
+    }
+
+    .dagtripColor{
+      width: 2%;
+      height: 85px;
+      display: inline-block;
+      float: right; 
+      background-color: #ffd597;
+    }
+
+
+/*END DAGTRIP*/
+
+
+
+.infoBar{
+  width: 100%;
+  background-color: #525263;
+  display: inline-block;
+  padding: 0%;
+  margin: 0%;
+  color: #faffd1;
+  max-height: 160px;
+
+}
+
+    .infoBarI{
+      height: 70px;
+      padding-left: 25%;
+      margin-right: 5%;
+      margin-top: 3%;
+      background-image: url("../images/tutorial1Big.png");
+      background-repeat: no-repeat;
+      background-size: 60px;
+      background-position: 10px;
+    }
+
+    .infoBarII{
+      height: 80px;
+      padding-left: 25%;
+      margin-right: 5%;
+      background-image: url("../images/tutorial2Big.png");
+      background-repeat: no-repeat;
+      background-size: 60px;
+      background-position: 10px;
+    }
+
+    .infoBarIII{
+      height: 75px;
+      width: 20%;
+      float: left;
+      display: inline-block;
+    }
+    .infoBarIV{
+      height: 75px;
+      width: 70%;
+      display: inline-block;
+      float: right; 
+      margin-left: 8%;  
+    }
+
+    .infoBarV{
+      width: 100%;
+      margin-top: 5%;
+      display: inline-block;
+    }
+
+.infoBar p,h2{
+  margin: 2%;
+}
+
+.overzicht{
+  height: 180px;
+  border-top: #454656 1px solid;
+
+}
+  .kaartBtn{
+    width: 49%;
+    background-color: #454656;
+    display: inline-block;
+    height: 40px;
+    float: left;
+    border: #454656 1px solid;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .fotoBtn{
+    width: 50%;
+    display: inline-block;
+    height: 40px;
+    float: left;
+    border-top: #454656 1px solid;
+    border-bottom: #454656 1px solid;
+    line-height: 40px;
+    text-align: center;
+  }
+
+/*END MATS*/
+
+  .infoBarItem{
+    height: 55px;
+  }
+.buildings{
+  width: 100%;
+  height: 139px;
+  display: inline-block;
+  background-image: url("buildings.png");
+}
+
+
+.tiles li{
+  width: 33.3%;
+  height: 69px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin: 0;
+  float: left;
+  margin-left: -2px;
+  margin-top: -2px;
+  border: 2px solid #525263;
+  border-right-style: none;
+}
+
+.tiles li p{
+  line-height: 68px;
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li{
+
+}
+/*END STARTPAGE*/
+
+
+/*POPUP*/
+.roundedPopup{
+  width: 80%;
+  height: 2%;
+  display: inline-block;
+  background-color: #454656;
+     -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+  font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+  text-align: center;
+  letter-spacing: 0.1em;  
+  padding: 15px 0.65px 15px 0.65px;
+  margin-left: 10%;
+}
+
+.roundedPopupMini{
+  width: 40%;
+  margin-left: 30%;
+  padding: 0px 0px 0px 0px;
+  margin-bottom: -10px;
+  letter-spacing: 0.14em; 
+  color: #ff5f48;
+}
+
+/*END POPUP*/
+
+
+/*@FONT FACE*/
+@font-face {
+    font-family: 'susaRegular';
+    src: url('@fontFace/SusaRegular/susa-regular-webfont.eot');
+    src: url('@fontFace/SusaRegular/susa-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('@fontFace/SusaRegular/susa-regular-webfont.woff') format('woff'),
+         url('@fontFace/SusaRegular/susa-regular-webfont.ttf') format('truetype'),
+         url('@fontFace/SusaRegular/susa-regular-webfont.svg#susaregularregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+
+
 
 /* line 11, ../sass/custom.scss */
 #subContent {
   white-space: nowrap;
   overflow: scroll;
-  background-color: #dddddd;
-  height: 100px;
 }
 
 /* line 18, ../sass/custom.scss */
 #infoContent {
   margin-top: 0px;
-  height: 150px;
-  background-color: blue;
+  
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   /* Firefox 4 */
@@ -46,8 +401,7 @@ ul li {
 /* line 36, ../sass/custom.scss */
 .venue {
   width: 110px;
-  height: 100px;
-  background-color: red;
+  height:139px;
   margin-left: 0px;
   display: inline-block;
 }
@@ -56,7 +410,6 @@ ul li {
 
 /*STYLE CSS */
 #Firstcontainer{
-  background-color: #2a2b3c;
   width: 100%;
   height: 100%;
 }
