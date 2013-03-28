@@ -157,7 +157,7 @@ h1{
 		}
 
 
-
+/*BEGIN MATS*/
 .infoBar{
 	width: 100%;
 	background-color: #525263;
@@ -165,6 +165,7 @@ h1{
 	padding: 0%;
 	margin: 0%;
 	color: #faffd1;
+	max-height: 180px;
 }
 
 		.infoBarI{
@@ -178,6 +179,8 @@ h1{
 			height: 70px;
 			margin-left: 25%;
 			margin-right: 5%;
+			margin-top: 3%;
+
 		}
 
 		.infoBarIII{
@@ -200,6 +203,7 @@ h1{
 			display: inline-block;
 		}
 
+
 .infoBar p,h2{
 	margin: 2%;
 }
@@ -215,7 +219,7 @@ h1{
 		display: inline-block;
 		height: 40px;
 		float: left;
-		border: #454656 1px solid;
+		border: #454656 2px solid;
 		line-height: 40px;
 		text-align: center;
 	}
@@ -225,13 +229,49 @@ h1{
 		display: inline-block;
 		height: 40px;
 		float: left;
-		border-top: #454656 1px solid;
-		border-bottom: #454656 1px solid;
+		border-top: #454656 2px solid;
+		border-bottom: #454656 2px solid;
 		line-height: 40px;
 		text-align: center;
 	}
 
 /*END MATS*/
+
+
+
+/*BEGIN DAGTRIP*/
+.dagtripItem{
+	border-bottom: #454656 2px solid;
+	width: 100%;
+	height: 85px;
+}
+		.dagtripIcontje{
+			width: 20%;
+			height: 85px;
+			float: left;
+			display: inline-block;	
+			line-height: 20px;
+			background-color: #ffd597;
+		}
+		.dagtripTitel{
+			width: 50%;
+			height: 85px;
+			display: inline-block;
+			float: left;	
+			margin-left: 8%;	
+			line-height: 20px;
+		}
+
+		.dagtripColor{
+			width: 2%;
+			height: 85px;
+			display: inline-block;
+			float: right;	
+			background-color: #ffd597;
+		}
+
+
+/*END DAGTRIP*/
 
 	.infoBarItem{
 		height: 55px;
