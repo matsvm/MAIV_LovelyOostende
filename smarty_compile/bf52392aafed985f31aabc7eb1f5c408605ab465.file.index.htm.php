@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 06:09:48
 =======
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 16:04:48
@@ -7,6 +8,9 @@
 =======
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 17:00:09
 >>>>>>> 4c5a26c63abf8feb379c2917504956bbc65a5869
+=======
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 17:28:31
+>>>>>>> kak
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:6304080805153032425bf06-33875079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -17,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       0 => 'smarty_template/index.htm',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       1 => 1364394629,
 =======
       1 => 1364483087,
@@ -24,6 +29,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 =======
       1 => 1364486336,
 >>>>>>> 4c5a26c63abf8feb379c2917504956bbc65a5869
+=======
+      1 => 1364488109,
+>>>>>>> kak
       2 => 'file',
     ),
   ),
@@ -72,7 +80,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="menuBar">
             <div class="info"><p>id</p></div>
             <div class="title"><p>Dag uitstippelen</p></div>
-            <div class="dagtripIcon"></div>
+            <div class="dagtripIcon"><span>0</span></div>
         </div>
 
 

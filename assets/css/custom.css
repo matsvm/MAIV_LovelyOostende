@@ -130,7 +130,9 @@ h1{
       display: inline-block;
       font-family: "susaRegular";
       text-align: center;
-      padding-top: 10px; 
+      padding-top: 5px; 
+      font-size: 1.2em;
+
     }
 
     .title{
@@ -140,6 +142,8 @@ h1{
       display: inline-block;
       font-family: "susaRegular";
       text-align: center;
+      padding-top: 5px; 
+      font-size: 1.2em;
     }
 
     .dagtripIcon{
@@ -152,6 +156,12 @@ h1{
       background-repeat: no-repeat;
       background-size: 40px;
       background-position: center;
+      text-align: center;
+      line-height: 66px;
+    }
+
+    .dagtripIcon span{
+      color: #ff5f48;
     }
 
 /*BEGIN DAGTRIP*/
