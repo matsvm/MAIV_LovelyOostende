@@ -52,10 +52,10 @@ h1{
 	max-width: 400px;
 	height: 30%;
 	background-color: #ff5f48;
-     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
+     -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
 	text-transform: uppercase;
 	font-size: 1.018em; /* 26 * 1.618 = 42.068 */
 	text-align: center;
@@ -64,6 +64,26 @@ h1{
 	letter-spacing: 0.1em;
 	margin-top: 5%;
 	margin-bottom: 5%;
+}
+
+.Minibutten{
+	margin: auto;
+	width: 85%;
+	max-width: 350px;
+	height: 18%;
+	background-color: #ff5f48;
+     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+	text-align: center;
+	padding: 12px 0.65px 12px 0.65px;
+	font-weight: 500;
+	letter-spacing: 0.1em;
+	line-height: 25px;
+	margin-bottom: 20px;
 }
 
 /*BUTTONS*/
@@ -77,10 +97,10 @@ h1{
 	display: inline-block;
 
 	background-color: #ff5f48;
-     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -khtml-border-radius: 10px;
-    border-radius: 10px;
+     -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
 	text-transform: uppercase;
 	font-size: 1.018em; /* 26 * 1.618 = 42.068 */
 	text-align: center;
@@ -99,17 +119,18 @@ h1{
 /*START PAGE*/
 
 .menuBar{
-	height: 65px;
+	height: 55px;
 	width: 100%;
 	display: inline-block;
 }
-	.info{
+		.info{
 			width: 22%;
 			height: 100%;
 			border-right: #454656 1px solid;
 			display: inline-block;
 			font-family: "susaRegular";
 			font-size: 1.318em;
+			line-height: 10px;
 			text-align: center;
 		}
 
@@ -120,6 +141,8 @@ h1{
 			display: inline-block;
 			font-family: "susaRegular";
 			font-size: 1.318em;
+
+			line-height: 10px;
 			text-align: center;
 		}
 
@@ -127,23 +150,30 @@ h1{
 			width: 22%;
 			height: 100%;
 			display: inline-block;
+			font-family: "susaRegular";
+			text-align: center;
+
+
 		}
 
 
 
 .infoBar{
 	width: 100%;
-	/*height: 145px;*/
-	background-color: #454656;
+	height: 145px;
+	background-color: #525263;
 	display: inline-block;
 	padding: 0%;
 	margin: 0%;
 	color: #faffd1;
 }
-
-.infoBarItem{
-	height: 65px;
+.infoBar p{
+	margin: 3%;
 }
+
+	.infoBarItem{
+		height: 55px;
+	}
 
 
 .buildings{
@@ -151,6 +181,36 @@ h1{
 	height: 142px;
 	display: inline-block;
 	background-image: url("buildings.png");
+}
+
+
+.tiles li{
+	width: 33.3%;
+	height: 69px;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	margin: 0;
+	float: left;
+	margin-left: -2px;
+	margin-top: -2px;
+	border: 2px solid #525263;
+	border-right-style: none;
+}
+
+.tiles li p{
+	line-height: 68px;
+	text-align: center;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li{
+
 }
 /*END STARTPAGE*/
 
