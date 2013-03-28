@@ -119,7 +119,7 @@ h1{
 /*START PAGE*/
 
 .menuBar{
-  height: 55px;
+  height: 65px;
   width: 100%;
   display: inline-block;
 }
@@ -129,9 +129,8 @@ h1{
       border-right: #454656 1px solid;
       display: inline-block;
       font-family: "susaRegular";
-      font-size: 1.318em;
-      line-height: 10px;
       text-align: center;
+      padding-top: 10px; 
     }
 
     .title{
@@ -140,22 +139,19 @@ h1{
       border-right: #454656 1px solid;
       display: inline-block;
       font-family: "susaRegular";
-      font-size: 1.318em;
-
-      line-height: 10px;
       text-align: center;
     }
 
     .dagtripIcon{
-      width: 20%;
       height: 100%;
+      width: 20%;
       display: inline-block;
       font-family: "susaRegular";
-      text-align: center;
-
+      float: right;
       background-image: url("../images/dagTripIconBig.png");
       background-repeat: no-repeat;
-      background-size: 60px;
+      background-size: 40px;
+      background-position: center;
     }
 
 /*BEGIN DAGTRIP*/
@@ -177,7 +173,7 @@ h1{
       height: 85px;
       display: inline-block;
       float: left;  
-      margin-left: 8%;  
+      margin-left: 3%;  
       line-height: 20px;
     }
 
@@ -248,6 +244,10 @@ h1{
 
 .infoBar p,h2{
   margin: 2%;
+}
+
+ h2 {
+    font-size: 1.2em;
 }
 
 .overzicht{
