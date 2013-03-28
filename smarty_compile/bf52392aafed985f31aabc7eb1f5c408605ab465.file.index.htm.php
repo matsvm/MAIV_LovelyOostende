@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 14:13:56
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 15:01:45
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:6304080805153032425bf06-33875079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364476252,
+      1 => 1364479267,
       2 => 'file',
     ),
   ),
@@ -61,8 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
     <div id="infoContent" class="infoBar">
-    <div class="infoBarItem"><p>Je kan de attracties filteren per <span>zintuig</span> of je huidige locatie</p></div>
-        <div class="Minibutten"> + toevoegen aan dagtrip</div>
+    
     </div>
     <div id="content" class="buildings">
 
