@@ -23,7 +23,7 @@ class AppController
     }
 
     public function render(){
-        $this->smarty->display('index.html');
+        $this->smarty->display('index.htm');
     }
     
 }
