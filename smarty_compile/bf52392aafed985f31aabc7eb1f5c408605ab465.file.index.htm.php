@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 06:09:48
+=======
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 16:04:48
+>>>>>>> 69ac9a1366de0711b84025f09e99ed01bc65d8a2
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:6304080805153032425bf06-33875079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
+<<<<<<< HEAD
       1 => 1364394629,
+=======
+      1 => 1364483087,
+>>>>>>> 69ac9a1366de0711b84025f09e99ed01bc65d8a2
       2 => 'file',
     ),
   ),
@@ -38,11 +46,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/app.js"></script>
-    <link href="assets/css/fontface.css" rel="stylesheet" type="text/css" media="screen" />
 
     <!--<link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen and (max-width:320px) and (max-width:480px)" />-->
+     <link href="assets/css/normalize.css" rel="stylesheet" type="text/css" media="screen"/>
 
      <link href="assets/css/custom.css" rel="stylesheet" type="text/css" media="screen"/>
+     <link href='http://fonts.googleapis.com/css?family=Maven+Pro:400,700' rel='stylesheet' type='text/css'>
 
 
 </head>
@@ -51,21 +60,53 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     
 
 <div id="container">
-    <div  id="infoContent" class="verborgen"></div>
+    <div id="startPage">
+        <div class="menuBar">
+            <div class="info"><p>id</p></div>
+            <div class="title"><p>Dag uitstippelen</p></div>
+            <div class="dagtripIcon"></div>
+        </div>
+
+
+    <div id="infoContent" class="infoBar">
+    </div>
+
+
+    <!--<div class="dagtripItem">
+            <div class="dagtripIcontje">F2</div>
+            <div class="dagtripTitel"><h2>De vuurtoren</h2><p>Straatnaam 432 Oostende</p></div>
+            <div class="dagtripColor"></div>
+        </div>
+
+        <div class="dagtripItem">
+            <div class="dagtripIcontje">F2</div>
+            <div class="dagtripTitel"><h2>Restaurant</h2><p>Straatnaam 432 Oostende</p></div>
+            <div class="dagtripColor"></div>
+        </div>
+
+        <div class="dagtripItem">
+            <div class="dagtripIcontje">F2</div>
+            <div class="dagtripTitel"><h2>Wellnesscentrum</h2><p>Straatnaam 432 Oostende</p></div>
+            <div class="dagtripColor"></div>
+        </div>-->
+
+        
     
-    <div id="content">
+
+    <div id="content" class="buildings">
 
         <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
     </div>
-    <ul>
-        <li><a href="proeven.html" class="zintuig">Proeven</a></li>
-        <li><a href="ruiken.html" class="zintuig">Ruiken</a></li>
-        <li><a href="zien.html" class="zintuig">Zien</a></li>
-        <li><a href="horen.html" class="zintuig">Horen</a></li>
-        <li><a href="voelen.html" class="zintuig">Voelen</a></li>
+    <ul class="tiles">
+        <li><p class="zintuig">Dichtbij</p></li>
+        <li><p class="zintuig">Zien</p></li>
+        <li><p class="zintuig">Proeven</p></li>
+        <li><p class="zintuig">Ruiken</p></li>
+        <li><p class="zintuig">Voelen</p></li>
+        <li><p class="zintuig">Horen</p></li>
     </ul>
-    
+    </div>
    
 </div>
 </body>
