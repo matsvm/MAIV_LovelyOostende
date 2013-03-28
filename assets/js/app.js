@@ -183,7 +183,7 @@ function changeDisplay(){
   for(var i =0;i<currentVenues.length;i++){
     var element = currentVenues[i];
     
-      var item ="<span style='margin-left:500px' id='venue"+element.id+"' class='venue'><h3>"+element.name+"</h3> "+
+      var item ="<span style='margin-left:500px' id='venue"+element.id+"' class='venue'><h3>"+element.name+"</h3><img src='assets/images/attracties/proeven/"+element.name+".png'> "+
 
         "</span>";
         $("#subContent").append(item);
@@ -276,7 +276,7 @@ function clickVenuehandler(){
         console.log("Found it!");
         selectedVenue = element;
 
-        var item= "<div class='infoBarIII'>FOTO</div><div class='showDetail'><div class='infoBarIV'><h2>"+element.name+"</h2><p>"+element.adress+"</p></div></div>";
+        var item= "<div class='infoBarIII'>FOTO</div><div class='showDetail'><div class='infoBarIV'><h2>"+element.name+"</h2><p>"+element.adress+"</p></div><div class='infoBarArrow'><img src='assets/images/arrow.png' width='17'></div></div>";
 //            <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div><div class='infoBarItem'><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p></div>";
         var favorites = JSON.parse(localStorage.getItem('favorites'));
 
@@ -301,7 +301,7 @@ function clickVenuehandler(){
             $("#likeKlik"+element.id).click(likeKlik);
            }else{
             console.log("favorites vol");
-            item += "<div class='infoBarV'><div class='Minibutten'>Dagtrip is volledig</div></div>";
+            item += "<div class='infoBarV'><div style='background-color:#e28a81;'  class='Minibutten'>Dagtrip is volledig</div></div>";
 
             $("#infoContent").append(item);
            } 
@@ -334,7 +334,7 @@ function favorietVerwijderen(){
 }
 function showDetailPage(){
   console.log("Click on title");
-  var item="<div class='detailPage' style='background-color:#525263;position:absolute; margin-top:66px;'>"+
+  var item="<div class='detailPage' style='background-color:#525263;position:absolute;z-index:5; margin-top:66px;'>"+
   "<div class='overzicht'>"+
             "<div class='infoBarIV'>"+
                     "<h2>"+selectedVenue.name+"</h2>"+
@@ -380,7 +380,7 @@ function showDetailPage(){
           });
            }else{
             console.log("favorites vol");
-            item += "<div class='infoBarV'><div class='Minibutten'>Dagtrip is volledig</div></div>";
+            item += "<div class='infoBarV'><div style='background-color:#e28a81;' class='Minibutten'>Dagtrip is volledig</div></div>";
 
            $("body").prepend(item);
            } 
