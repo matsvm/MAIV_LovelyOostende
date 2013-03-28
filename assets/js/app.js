@@ -260,7 +260,6 @@ function clickVenuehandler(){
 function favorietVerwijderen(){
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   console.log("[Fav Verwijderen]"+favorites)
-  updateDagTripCount();
   for(var j =0;j<favorites.length;j++){
     var elementje = favorites[j];
     console.log(elementje.name);
@@ -270,6 +269,7 @@ function favorietVerwijderen(){
       }
     }
   localStorage.setItem('favorites',JSON.stringify(favorites));
+  updateDagTripCount();
 
 }
 function showDetailPage(){
@@ -361,7 +361,7 @@ function likeKlik(){
             scrollTop: 1
             }, 500);
         
-  updateDagTripCount()
+  
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   console.log(favorites.length);
   
@@ -384,17 +384,21 @@ function likeKlik(){
     $(this).parent().remove();
     return false;
   })
+  updateDagTripCount();
   console.log(JSON.parse(localStorage.getItem('favorites')));
   return false;
   }
 function updateDagTripCount(){
+  if(JSON.parse(localStorage.getItem('favorites'))){
   var favorites = JSON.parse(localStorage.getItem('favorites'));
-  count = (favorites.length);
-  $("#dagtripIcon span").innerHTML = count;
+  count = favorites.length;
+  console.log(count);
+  $(".dagtripIcon span").text(count);
+  }
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:65px; background-color:#2a2b3c;width:100%; '>";
+  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:65px; background-color:#2a2b3c;width:100%;height:100% '>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   
