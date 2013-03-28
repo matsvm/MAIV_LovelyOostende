@@ -60,7 +60,7 @@ $(document).ready(init);
 
 
 function berekenDichtsteVenue(){
-
+  currentVenues = new Array();
   var current=navigator.geolocation.getCurrentPosition(getCoordinaten);
   
   function getCoordinaten(position) {
@@ -138,29 +138,30 @@ function changeDisplay(){
         });
 
 
-        $("#likeKlik"+element.id).click(likeKlik);
+        
     }
   }
 
 
 function navigate(){
-  if(currentZintuig==this.text){
+  console.log($(this).text());
+  if(currentZintuig==$(this).text()){
 
     return false;
   }else{
     $("#infoContent").empty();
-    currentZintuig=this.text
+    currentZintuig=$(this).text()
     if($("#infoContent").hasClass("verborgen")){
      
     }else{
-      $("#infoContent").addClass("verborgen");
+      
       venueArray= new Array();
       
     }
     var key =0;
     //console.log(this.text);
 
-    switch(this.text){
+    switch($(this).text()){
       case "Proeven":
         key =1;
         break;
@@ -176,19 +177,24 @@ function navigate(){
       case "Horen":
         key = 5;
       break;
+
       
 
       }
-      currentVenues = new Array();
-      for(var i =0;i<allVenues.length;i++){
-        var element = allVenues[i];
-        if(element.cat == key){
-          console.log(element);
-          currentVenues.push(element);
-          
-        }
+      if($(this).text()=="Dichtbij"){
+        berekenDichtsteVenue();
+        }else{
+        currentVenues = new Array();
+        for(var i =0;i<allVenues.length;i++){
+          var element = allVenues[i];
+          if(element.cat == key){
+            console.log(element);
+            currentVenues.push(element);
+            
+          }
+      }
+      changeDisplay();
     }
-    changeDisplay();
   
     //"<a href='http://maps.apple.com/maps?ll="+value.lat+","+value.long'></a>";
       
@@ -201,11 +207,8 @@ function clickVenuehandler(){
   $("#infoContent").empty();
   var currentVenue = $(this).find('h3').text();
   //console.log($(this).text());
-  if($("#infoContent").hasClass("verborgen")){
-    $("#infoContent").removeClass("verborgen");
+  var favorites = JSON.parse(localStorage.getItem('favorites'));
 
-    console.log("Show");
-  }
   var element = null;
   for (var i = 0; i < currentVenues.length; i++) {
       element = currentVenues[i];
@@ -213,35 +216,33 @@ function clickVenuehandler(){
       if(element.name==currentVenue){
         console.log("Found it!");
         selectedVenue = element;
+        console.log(favorites.length);
+        var item= "<div class='infoBarItem'><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p></div>";
 
-        /*var item ="<div class='gebouw'><h3>"+element.name+"</h3> <p>"+element.description+"</p> <p>"+element.adress+"</p> "+
-        "<a href='https://maps.google.be/maps?q=+"+element.lat+"+"+element.long+"'></a>"+
-      "<a id='likeKlik"+element.id+"' href='index.php?page=vote&value="+element.id+"'>like</a>"+
-
-        "</div>";
-        
-
-        var myLatlng = new google.maps.LatLng(element.lat, element.long);
-        var myOptions = {
-            zoom: 15,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-
-        var map = new google.maps.Map(document.getElementById("map_canvas"+element.name),myOptions);
-        var marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          icon: "assets/images/marker.png",
-          title:"Hello World!"
-        })*/
-
-        var item= "<span><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p>"+
-        "<a id='likeKlik"+element.id+"' href='#'>Add To List</a>"+
-
-          "</span>";
+        var inList=false;
+        for(var j =0;j<favorites.length;j++){
+          var elementje = favorites[j];
+          if(selectedVenue.name == elementje.name){
+            inList = true;
+          }
+        }
+        if(inList==true){
+          console.log("De plaats zit er reeds in");
+          item += "<div id='likeKlik"+element.id+"' class='Minibutten'>-verwijderen uit dagtrip</div>";
           $("#infoContent").append(item);
-        $("#likeKlik"+element.id).click(likeKlik);
+
+          $("#likeKlik"+element.id).click(favorietVerwijderen);
+        }else{
+          if(favorites.length<5){
+            console.log("De plaats zit er nog niet in");
+            item += "<div id='likeKlik"+element.id+"' class='Minibutten'>+ toevoegen aan dagtrip</div>";
+            $("#infoContent").append(item);
+            $("#likeKlik"+element.id).click(likeKlik);
+           }else{
+            console.log("favorites vol");
+            $("#infoContent").append(item);
+           } 
+        }
         $(".showDetail").click(showDetailPage);
 
 
@@ -253,7 +254,21 @@ function clickVenuehandler(){
   }
 
   }
+function favorietVerwijderen(){
+  var favorites = JSON.parse(localStorage.getItem('favorites'));
+  console.log("[Fav Verwijderen]"+favorites)
 
+  for(var j =0;j<favorites.length;j++){
+    var elementje = favorites[j];
+    console.log(elementje.name);
+      if(selectedVenue.name == elementje.name){
+        favorites.splice(j,1);
+        console.log("[Foundit]"+favorites)
+      }
+    }
+  localStorage.setItem('favorites',JSON.stringify(favorites));
+
+}
 function showDetailPage(){
   console.log("Click on title");
   var item="<div class='detailPage' style='position:absolute; background-color:red;'><span id='vorige'>Terug</span> <h3>"+selectedVenue.name+" </h3> <p>"+selectedVenue.description+"</p>"+
@@ -298,40 +313,31 @@ function likeKlik(){
   console.log(selectedVenue);
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   console.log(favorites.length);
-  var inList=false;
-  for(var i =0;i<favorites.length;i++){
-    var element = favorites[i];
-    if(selectedVenue.name == element.name){
-      inList = true;
-    }
-  }
-  if(inList==true){
-    console.log("De plaats zit er reeds in");
-  }else{
-    if(favorites.length<5){
-      console.log("het zit er nog niet in");
-      favorites.push(selectedVenue);
-      localStorage.setItem('favorites',JSON.stringify(favorites));
-      var item="<div style='position:absolute; z-index:5;'><h2>Geslijm geslijm</h2> <p>bla bla bla bla bla</p> <a id='keerTerug' href=#> keer terug </a> <a id='toDagtrip' href=#>Naar dagtrip </a></div>";
-      $('body').prepend(item);
-      $("#toDagtrip").click(function(){
-        $(this).parent().remove();
-        showDagTrip();
-        return false;
-      });
-      $("#keerTerug").click(function(){
-        $(this).parent().remove();
-        return false;
-      })
-      console.log(JSON.parse(localStorage.getItem('favorites')));
-    }else{
-      console.log("Het zit er nog niet in, maar het zit al vol");
-    }
+  
+  favorites.push(selectedVenue);
+  localStorage.setItem('favorites',JSON.stringify(favorites));
+  var item="<div id='popUp' style='position:absolute; background-color:#2a2b3c; z-index:5;'>"+
+  "<h1>Geslijm geslijm</h1> <p>Je hebt "+selectedVenue.name+" toegevoegd aan je dagtrip. Mooie keuze!</p> "+
+  "<div class='miniBtn' id='keerTerug'> keer terug </div>"+
+  "<div class='miniBtn'id='toDagtrip' >Naar dagtrip </div>"+
+  "</div>";
+  $('body').prepend(item);
+  $("#toDagtrip").click(function(){
+    $(this).parent().remove();
+    showDagTrip();
+    return false;
+  });
+  $("#keerTerug").click(function(){
+    $(this).parent().remove();
+    return false;
+  })
+  console.log(JSON.parse(localStorage.getItem('favorites')));
+  return false;
   }
   
 
-  return false;
-}
+  
+
 function showDagTrip(){
   console.log("Show dagtrip");
   var item = "<div style='position:absolute;'d><h2>Hier komt jouw dagtrip</h2> <p>bla bla bla bla bla</p>";
