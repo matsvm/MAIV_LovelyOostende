@@ -393,15 +393,30 @@ function likeKlik(){
 
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div style='position:absolute;'d><h2>Hier komt jouw dagtrip</h2> <p>bla bla bla bla bla</p>";
+  var item = "<div style='position:absolute; margin-top:50px'd>";
+  
+
+
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   for(var i=0;i<favorites.length;i++){
     var element = favorites[i];
-    item +="<p>"+ element.name+" </p>";
-  }
-  item +=" </div>";
-  $('body').prepend(item);
 
+  item+="<div class='dagtripItem'>"+
+  "<div class='dagtripIcontje'>F2</div>"+
+  "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div>"+
+  "<div class='dagtripColor'></div>"+
+  "</div>"
+
+  }
+  item+="<div class='miniBtn' id='keerTerug'> keer terug </div>";
+  
+  item +=" </div>";
+
+  $('body').prepend(item);
+  $("#keerTerug").click(function(){
+    $(this).parent().remove();
+    return false;
+  })
 }
   
