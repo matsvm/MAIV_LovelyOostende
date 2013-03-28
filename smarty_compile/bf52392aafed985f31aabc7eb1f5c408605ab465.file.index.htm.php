@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 06:09:48
 =======
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 16:04:48
@@ -11,14 +12,18 @@
 =======
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 17:28:31
 >>>>>>> kak
+=======
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 17:16:28
+>>>>>>> buildings-touched images
          compiled from "smarty_template/index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:6304080805153032425bf06-33875079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:163906304751546cdc4f5b52-79969866%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,22 +37,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 =======
       1 => 1364488109,
 >>>>>>> kak
+=======
+      1 => 1364486874,
+>>>>>>> buildings-touched images
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6304080805153032425bf06-33875079',
+  'nocache_hash' => '163906304751546cdc4f5b52-79969866',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_51530324265065_68584015',
   'variables' => 
   array (
     'content' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_51546cdc5040a8_93951368',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_51530324265065_68584015')) {function content_51530324265065_68584015($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_51546cdc5040a8_93951368')) {function content_51546cdc5040a8_93951368($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
