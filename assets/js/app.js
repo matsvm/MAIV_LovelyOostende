@@ -237,7 +237,7 @@ function clickVenuehandler(){
         })*/
 
         var item= "<span><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p>"+
-        "<a id='likeKlik"+element.id+"' href='index.php?page=vote&value="+element.id+"'>Add To List</a>"+
+        "<a id='likeKlik"+element.id+"' href='#'>Add To List</a>"+
 
           "</span>";
           $("#infoContent").append(item);
@@ -257,16 +257,18 @@ function clickVenuehandler(){
 function showDetailPage(){
   console.log("Click on title");
   var item="<div class='detailPage' style='position:absolute; background-color:red;'><span id='vorige'>Terug</span> <h3>"+selectedVenue.name+" </h3> <p>"+selectedVenue.description+"</p>"+
-  "<a id='likeDetailKlik"+selectedVenue.id+"' href='index.php?page=vote&value="+selectedVenue.id+"'>Add To List</a>"+
+  "<a id='likeDetailKlik"+selectedVenue.id+"' href=#>Add To List</a>"+
   "<div id='map_canvas"+selectedVenue.name+"' style='width:400px; height:400px;'></div> </div>";
   $("body").prepend(item);
   $("#likeDetailKlik"+selectedVenue.id).click(function(){
-    $(this).parent().remove();
-    likeKlik()
+    //$(this).parent().remove();
+        console.log("removeDetailPage");
+
+    likeKlik();
+    return false;
   });
 
   $("#vorige").click(function(){
-    console.log("removeDetailPage");
     $(this).parent().remove();
   })
   var myLatlng = new google.maps.LatLng(selectedVenue.lat, selectedVenue.long);
@@ -291,7 +293,7 @@ function showDetailPage(){
   return false;
 }
 
-function likeKlik(e){
+function likeKlik(){
   //console.log($(this).attr('href'));
   console.log(selectedVenue);
   var favorites = JSON.parse(localStorage.getItem('favorites'));
@@ -310,7 +312,7 @@ function likeKlik(e){
       console.log("het zit er nog niet in");
       favorites.push(selectedVenue);
       localStorage.setItem('favorites',JSON.stringify(favorites));
-      var item="<div style='position:absolute;'><h2>Geslijm geslijm</h2> <p>bla bla bla bla bla</p> <a id='keerTerug' href=#> keer terug </a> <a id='toDagtrip' href=#>Naar dagtrip </a></div>";
+      var item="<div style='position:absolute; z-index:5;'><h2>Geslijm geslijm</h2> <p>bla bla bla bla bla</p> <a id='keerTerug' href=#> keer terug </a> <a id='toDagtrip' href=#>Naar dagtrip </a></div>";
       $('body').prepend(item);
       $("#toDagtrip").click(function(){
         $(this).parent().remove();
