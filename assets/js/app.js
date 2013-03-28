@@ -196,8 +196,6 @@ function navigate(){
       changeDisplay();
     }
   
-    //"<a href='http://maps.apple.com/maps?ll="+value.lat+","+value.long'></a>";
-      
         return false;
     
     }
@@ -273,7 +271,10 @@ function showDetailPage(){
   console.log("Click on title");
   var item="<div class='detailPage' style='position:absolute; background-color:red;'><span id='vorige'>Terug</span> <h3>"+selectedVenue.name+" </h3> <p>"+selectedVenue.description+"</p>"+
   "<a id='likeDetailKlik"+selectedVenue.id+"' href=#>Add To List</a>"+
-  "<div id='map_canvas"+selectedVenue.name+"' style='width:400px; height:400px;'></div> </div>";
+    "<a target='_blank' href='https://maps.google.be/maps?q="+selectedVenue.lat+","+selectedVenue.long+"'>"+ 
+
+
+  "<div id='map_canvas"+selectedVenue.name+"' style='width:400px; height:400px;'></div></a></div>";
   $("body").prepend(item);
   $("#likeDetailKlik"+selectedVenue.id).click(function(){
     //$(this).parent().remove();
@@ -295,6 +296,8 @@ function showDetailPage(){
       zoomControl:false,
       scaleControl:false,
       scrollwheel: false,
+      disableDoubleClickZoom: true,
+
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
