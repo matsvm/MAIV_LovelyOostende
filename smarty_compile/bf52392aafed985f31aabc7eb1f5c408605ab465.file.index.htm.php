@@ -1,45 +1,29 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 13:46:12
-=======
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 14:30:56
->>>>>>> 129e8ae97564ec1e0ed205bc17a5a49375b20a04
-=======
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 15:22:17
->>>>>>> cfd1224e3bbde39897719701845498156739fe5c
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-27 21:41:52
          compiled from "smarty_template/index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:999711009515069015b8a53-18369328%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:6304080805153032425bf06-33875079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      1 => 1364388006,
-=======
-      1 => 1364390400,
->>>>>>> 129e8ae97564ec1e0ed205bc17a5a49375b20a04
-=======
-      1 => 1364394077,
->>>>>>> cfd1224e3bbde39897719701845498156739fe5c
+      1 => 1364394499,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '999711009515069015b8a53-18369328',
+  'nocache_hash' => '6304080805153032425bf06-33875079',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_515069015de049_53017115',
+  'unifunc' => 'content_51530324265065_68584015',
   'variables' => 
   array (
     'content' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_515069015de049_53017115')) {function content_515069015de049_53017115($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_51530324265065_68584015')) {function content_51530324265065_68584015($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -49,6 +33,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     
     <title>Lovely Oostende Jonas</title>
+
 
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
@@ -80,10 +65,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <li><a href="horen.html" class="zintuig">Horen</a></li>
         <li><a href="voelen.html" class="zintuig">Voelen</a></li>
     </ul>
-
-   
+    
    
 </div>
 </body>
+
 </html>
 <?php }} ?>

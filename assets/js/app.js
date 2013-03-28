@@ -31,7 +31,7 @@ $(document).ready(init);
    berekenDichtsteVenue();
   }else{
     getNewVenues();
-    berekenDichtsteVenue();
+    
           }
         };
     
@@ -46,12 +46,14 @@ $(document).ready(init);
         url: url,
         dataType : 'json',
         success: function(data){
-          console.log(data);
+          console.log("[ajax Response] "+data);
+          allVenues = data;
           localStorage.setItem('Venues',JSON.stringify(data));
+          berekenDichtsteVenue();
            $.each(data, function(key,value){
             //console.log(value);
            })
-          allVenues = JSON.parse(localStorage.getItem('Venues'));
+          
         }
       })
   }
@@ -64,6 +66,7 @@ function berekenDichtsteVenue(){
   function getCoordinaten(position) {
     myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
     console.log(myLatlng);
+    console.log(allVenues);
     
     for(var i =0;i<allVenues.length;i++){
       var element = allVenues[i];
@@ -186,21 +189,13 @@ function navigate(){
         }
     }
     changeDisplay();
-    
-
-    
-    
-    
-
+  
     //"<a href='http://maps.apple.com/maps?ll="+value.lat+","+value.long'></a>";
       
         return false;
     
     }
   }
-
-        
-
 
 function clickVenuehandler(){
   $("#infoContent").empty();
@@ -262,8 +257,14 @@ function clickVenuehandler(){
 function showDetailPage(){
   console.log("Click on title");
   var item="<div class='detailPage' style='position:absolute; background-color:red;'><span id='vorige'>Terug</span> <h3>"+selectedVenue.name+" </h3> <p>"+selectedVenue.description+"</p>"+
+  "<a id='likeDetailKlik"+selectedVenue.id+"' href='index.php?page=vote&value="+selectedVenue.id+"'>Add To List</a>"+
   "<div id='map_canvas"+selectedVenue.name+"' style='width:400px; height:400px;'></div> </div>";
   $("body").prepend(item);
+  $("#likeDetailKlik"+selectedVenue.id).click(function(){
+    $(this).parent().remove();
+    likeKlik()
+  });
+
   $("#vorige").click(function(){
     console.log("removeDetailPage");
     $(this).parent().remove();
@@ -287,7 +288,7 @@ function showDetailPage(){
     icon: "assets/images/marker.png",
     title:"Hello World!"
   })
-
+  return false;
 }
 
 function likeKlik(e){
@@ -308,13 +309,38 @@ function likeKlik(e){
     if(favorites.length<5){
       console.log("het zit er nog niet in");
       favorites.push(selectedVenue);
+      localStorage.setItem('favorites',JSON.stringify(favorites));
+      var item="<div><h2>Geslijm geslijm</h2> <p>bla bla bla bla bla</p> <a id='keerTerug' href=#> keer terug </a> <a id='toDagtrip' href=#>Naar dagtrip </a></div>";
+      $('body').prepend(item);
+      $("#toDagtrip").click(function(){
+        $(this).parent().remove();
+        showDagTrip();
+        return false;
+      });
+      $("#keerTerug").click(function(){
+        $(this).parent().remove();
+        return false;
+      })
+      console.log(JSON.parse(localStorage.getItem('favorites')));
     }else{
       console.log("Het zit er nog niet in, maar het zit al vol");
     }
   }
-  localStorage.setItem('favorites',JSON.stringify(favorites));
-  console.log(JSON.parse(localStorage.getItem('favorites')));
+  
 
   return false;
+}
+function showDagTrip(){
+  console.log("Show dagtrip");
+  var item = "<div><h2>Locatie addedGeslijm geslijm</h2> <p>bla bla bla bla bla</p>";
+  var favorites = JSON.parse(localStorage.getItem('favorites'));
+
+  for(var i=0;i<favorites.length;i++){
+    var element = favorites[i];
+    item +="<p>"+ element.name+" </p>";
+  }
+  item +=" </div>";
+  $('body').prepend(item);
+
 }
   
