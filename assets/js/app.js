@@ -14,6 +14,7 @@ $(document).ready(init);
 
   console.log("Dom Loaded!");
   $('#container .zintuig').click(navigate);
+  $(".dagtripIcon").click(showDagTrip);
   if(localStorage.getItem('favorites')){
 
   }else{
@@ -367,8 +368,7 @@ function likeKlik(){
   favorites.push(selectedVenue);
   localStorage.setItem('favorites',JSON.stringify(favorites));
   var item="<div style='position:absolute; background-color:#2a2b3c; z-index:5;margin-top:55px;'><div id='popUp'>"+
-  "<h1>Geslijm geslijm</h1> <p>Je hebt "+selectedVenue.name+" toegevoegd aan je dagtrip. Mooie keuze!</p> "+
-
+  "<h1>Geslijm geslijm</h1> <p>Je hebt "+selectedVenue.name+" toegevoegd aan je dagtrip. Mooie keuze!</p>"+
   "<div class='roundedPopup roundedPopupMini'><p>AANRADER</p></div>"+
         "<div class='roundedPopup'><p>Als koppel moet je zeker eens het uitzicht bewonderen bij zonsondergang!</p></div>"+
   "<div class='miniBtn' id='keerTerug'> keer terug </div>"+
@@ -387,27 +387,26 @@ function likeKlik(){
   console.log(JSON.parse(localStorage.getItem('favorites')));
   return false;
   }
-  
-
-  
 
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div style='position:absolute; margin-top:50px'd>";
-  
-
-
+  var item = "<div style='position:absolute; margin-top:50px; background-color:#2a2b3c; '>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   for(var i=0;i<favorites.length;i++){
     var element = favorites[i];
 
-  item+="<div class='dagtripItem'>"+
+  item+="<div class='dagtripItem' id='dagTripItemKe"+element.name+"''>"+
   "<div class='dagtripIcontje'>F2</div>"+
   "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div>"+
   "<div class='dagtripColor'></div>"+
-  "</div>"
+  "</div>";
+  $('#dagtripItemKe'+element.name).click(function(){
+    console.log("Click on element uit lijst");
+    currentVenue = element;
 
+    showDetailPage();
+  })
   }
   item+="<div class='miniBtn' id='keerTerug'> keer terug </div>";
   
