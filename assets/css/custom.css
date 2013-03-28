@@ -445,6 +445,7 @@ ul{
 #subContent {
   white-space: nowrap;
   overflow: scroll;
+  overflow-y: hidden;
   height: 139px;
 }
 
