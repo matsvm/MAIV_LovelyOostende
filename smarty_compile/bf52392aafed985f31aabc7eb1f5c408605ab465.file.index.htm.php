@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 16:04:48
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 16:57:57
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:6304080805153032425bf06-33875079%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364483087,
+      1 => 1364486271,
       2 => 'file',
     ),
   ),
@@ -64,7 +64,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
 
 
-    <!--<div class="dagtripItem">
+    <div class="dagtripItem">
             <div class="dagtripIcontje">F2</div>
             <div class="dagtripTitel"><h2>De vuurtoren</h2><p>Straatnaam 432 Oostende</p></div>
             <div class="dagtripColor"></div>
@@ -80,7 +80,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="dagtripIcontje">F2</div>
             <div class="dagtripTitel"><h2>Wellnesscentrum</h2><p>Straatnaam 432 Oostende</p></div>
             <div class="dagtripColor"></div>
-        </div>-->
+        </div>
 
         
     
