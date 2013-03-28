@@ -292,7 +292,7 @@ function showDetailPage(){
         "<a target='_blank' href='https://maps.google.be/maps?q="+selectedVenue.lat+","+selectedVenue.long+"'><div id='map_canvas"+selectedVenue.name+"' class='buildings' style='width:320px; height:200px'>"+
         "</div></a>"+
 
- "<span id='vorige'>Terug</span><a id='likeDetailKlik"+selectedVenue.id+"' href=#>Add To List</a>";
+ "<span id='vorige'>Terug</span>";
         var favorites = JSON.parse(localStorage.getItem('favorites'));
 
         var inList=false;
@@ -326,11 +326,6 @@ function showDetailPage(){
            } 
         }
 
-
-
-
-  
-
   $("#vorige").click(function(){
     $(this).parent().remove();
   })
@@ -361,16 +356,24 @@ function showDetailPage(){
 function likeKlik(){
   //console.log($(this).attr('href'));
   console.log(selectedVenue);
+  $('html,body').animate({
+            scrollTop: 1
+            }, 500);
+        
+  
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   console.log(favorites.length);
   
   favorites.push(selectedVenue);
   localStorage.setItem('favorites',JSON.stringify(favorites));
-  var item="<div id='popUp' style='position:absolute; background-color:#2a2b3c; z-index:5;'>"+
+  var item="<div style='position:absolute; background-color:#2a2b3c; z-index:5;margin-top:55px;'><div id='popUp'>"+
   "<h1>Geslijm geslijm</h1> <p>Je hebt "+selectedVenue.name+" toegevoegd aan je dagtrip. Mooie keuze!</p> "+
+
+  "<div class='roundedPopup roundedPopupMini'><p>AANRADER</p></div>"+
+        "<div class='roundedPopup'><p>Als koppel moet je zeker eens het uitzicht bewonderen bij zonsondergang!</p></div>"+
   "<div class='miniBtn' id='keerTerug'> keer terug </div>"+
   "<div class='miniBtn'id='toDagtrip' >Naar dagtrip </div>"+
-  "</div>";
+  "</div></div>";
   $('body').prepend(item);
   $("#toDagtrip").click(function(){
     $(this).parent().remove();
