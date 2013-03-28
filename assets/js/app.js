@@ -183,7 +183,7 @@ function changeDisplay(){
   for(var i =0;i<currentVenues.length;i++){
     var element = currentVenues[i];
     
-      var item ="<span style='margin-left:500px' id='venue"+element.id+"' class='venue'><h3>"+element.name+"</h3><img src='assets/images/attracties/proeven/"+element.name+".png'> "+
+      var item ="<span style='margin-left:500px' id='venue"+element.id+"' class='venue'><h3 style='display:none;'>"+element.name+"</h3><img style='max-width:100%; max-height:100%;' src='assets/images/attracties/proeven/"+element.name+".png'> "+
 
         "</span>";
         $("#subContent").append(item);

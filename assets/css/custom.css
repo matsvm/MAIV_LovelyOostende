@@ -396,6 +396,7 @@ li{
 #subContent {
   white-space: nowrap;
   overflow: scroll;
+  height: 139px;
 }
 
 /* line 18, ../sass/custom.scss */
@@ -425,7 +426,7 @@ li{
 
 /* line 36, ../sass/custom.scss */
 .venue {
-  width: 110px;
+  
   height:139px;
   margin-left: 0px;
   display: inline-block;
