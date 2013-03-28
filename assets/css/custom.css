@@ -330,7 +330,9 @@ h1{
 }
 
 .tiles li p{
-  line-height: 68px;
+  margin: 0;
+  margin-top: 10px;
+  line-height: 78px;
   text-align: center;
 }
 
@@ -340,8 +342,55 @@ ul{
   margin: 0;
 }
 
-li{
 
+.dichtbij{
+  background-image: url("../images/menuIcons/iconDichtbij.png");
+  background-repeat: no-repeat;
+  background-position:  center top;
+  padding-top: -10px;
+  background-size: 35px;
+  color: #676772;
+}
+
+.zien{
+  background-image: url("../images/menuIcons/iconZien.png");
+  background-repeat: no-repeat;
+  background-position:  center top;
+  padding-top: -10px;
+  background-size: 35px;
+  color: #ffd597;
+}
+
+.proeven{
+  background-image: url("../images/menuIcons/iconProef.png");
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-size: 35px;
+  color: #ff5f48;
+}
+
+.ruiken{
+  background-image: url("../images/menuIcons/iconRuik.png");
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-size: 35px;
+  color: #57c2b2;
+}
+
+.voelen{
+  background-image: url("../images/menuIcons/iconVoel.png");
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-size: 35px;
+  color: #e34a66;
+}
+
+.horen{
+  background-image: url("../images/menuIcons/iconHoor.png");
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-size: 35px;
+  color: #a16bad;
 }
 /*END STARTPAGE*/
 

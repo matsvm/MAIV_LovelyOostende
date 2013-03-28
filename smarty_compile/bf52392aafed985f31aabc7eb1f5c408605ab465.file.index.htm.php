@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 23:46:06
+         compiled from "smarty_template/index.htm" */ ?>
+<?php /*%%SmartyHeaderCode:12583208995154c02def0ff7-58719083%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
+    array (
+      0 => 'smarty_template/index.htm',
+      1 => 1364510734,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '12583208995154c02def0ff7-58719083',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_5154c02defa161_36962528',
+  'variables' => 
+  array (
+    'content' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5154c02defa161_36962528')) {function content_5154c02defa161_36962528($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -44,7 +69,8 @@
             <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
 
-        {$content}
+        <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
     </div>
     <ul class="tiles">
         <li><p class="zintuig dichtbij">Dichtbij</p></li>
@@ -60,3 +86,4 @@
 </body>
 
 </html>
+<?php }} ?>
