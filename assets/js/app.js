@@ -310,7 +310,7 @@ function likeKlik(e){
       console.log("het zit er nog niet in");
       favorites.push(selectedVenue);
       localStorage.setItem('favorites',JSON.stringify(favorites));
-      var item="<div><h2>Geslijm geslijm</h2> <p>bla bla bla bla bla</p> <a id='keerTerug' href=#> keer terug </a> <a id='toDagtrip' href=#>Naar dagtrip </a></div>";
+      var item="<div style='position:absolute;'><h2>Geslijm geslijm</h2> <p>bla bla bla bla bla</p> <a id='keerTerug' href=#> keer terug </a> <a id='toDagtrip' href=#>Naar dagtrip </a></div>";
       $('body').prepend(item);
       $("#toDagtrip").click(function(){
         $(this).parent().remove();
@@ -332,7 +332,7 @@ function likeKlik(e){
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div><h2>Locatie addedGeslijm geslijm</h2> <p>bla bla bla bla bla</p>";
+  var item = "<div style='position:absolute;'d><h2>Hier komt jouw dagtrip</h2> <p>bla bla bla bla bla</p>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   for(var i=0;i<favorites.length;i++){
