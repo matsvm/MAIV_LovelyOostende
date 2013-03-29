@@ -171,7 +171,7 @@ h1{
       font-size: 0.76em;
       font-weight: 700;
       text-align: center;
-      color: #faffd1;
+      color: #ffd597;
       line-height: 60px;
       background-image: url("../images/backBtn.png");
       background-repeat: no-repeat;
@@ -179,6 +179,20 @@ h1{
       background-size: 55px;
 
     }
+
+.boottrip{
+  width: 80%;
+  height: 57px;
+  background-image: url("../images/golfBlauw.png");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 14px;
+}    
+
+.boottrip img{
+  /*MARGIN LEFT afstand voor de aantal dagtrips*/
+  margin-left:30px;
+}
 
 /*BEGIN DAGTRIP*/
 .dagtripItem{
@@ -276,6 +290,7 @@ h1{
       width: 9%;
       float: right;
       margin-top: 5%;
+      margin-right: 2%;
     }
 
     .infoBarArrow img{
@@ -515,3 +530,11 @@ ul{
   height:100px;
 }
 /*STYLE CSS */
+
+
+
+}    
+
+/*ANIMATE*/
+            
+/*END ANIMATE*/
