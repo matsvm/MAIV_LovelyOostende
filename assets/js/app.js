@@ -7,6 +7,7 @@ var currentVenues = new Array();
 var start = new Date().getTime();
 var maxVerganeTijd = 86400;
 var selectedVenue;
+var currentZIndex = 1;
 $(document).ready(init);
   function init(){
   console.log("Dom Loaded!");
@@ -375,7 +376,7 @@ function favorietVerwijderen(){
 }
 function showDetailPage(){
   console.log("Click on title");
-  var item= "<div class='detailPage' style='background-color:#525263;position:absolute;z-index:5; margin-top:66px;'><div id='vorige' class='terugBtn'>Terug</div>"+
+  var item= "<div class='detailPage' style='background-color:#525263;position:absolute;z-index:"+currentZIndex+"; margin-top:66px;'><div id='vorige' class='terugBtn'>Terug</div>"+
   "<div class='overzicht'>"+
             "<div class='infoBarIV' style='float:right;'>"+
                     "<h2>"+selectedVenue.name+"</h2>"+
@@ -390,7 +391,7 @@ function showDetailPage(){
         
         "<a target='_blank' href='https://maps.google.be/maps?q="+selectedVenue.lat+","+selectedVenue.long+"'><img style='max-height:100%;max-width:100%;display:none;' src='assets/images/venues/"+selectedVenue.img+"'><div id='map_canvas"+selectedVenue.name+"' class='buildings' style='width:320px; height:200px'>"+
         "</div></a>";
-
+        currentZIndex++;
         var favorites = JSON.parse(localStorage.getItem('favorites'));
 
         var inList=false;
@@ -480,13 +481,14 @@ function likeKlik(){
   
   favorites.push(selectedVenue);
   localStorage.setItem('favorites',JSON.stringify(favorites));
-  var item="<div style='position:absolute; background-color:#2a2b3c; z-index:5;margin-top:66px;'><div id='popUp'>"+
+  var item="<div style='position:absolute; background-color:#2a2b3c; z-index:"+currentZIndex+";margin-top:66px;'><div id='popUp'>"+
   "<h1>Geslijm geslijm</h1> <p>Je hebt "+selectedVenue.name+" toegevoegd aan je dagtrip. Mooie keuze!</p>"+
   "<div class='roundedPopup roundedPopupMini'><p>AANRADER</p></div>"+
         "<div class='roundedPopup'><p>Als koppel moet je zeker eens het uitzicht bewonderen bij zonsondergang!</p></div>"+
   "<div class='miniBtn' id='keerTerug'> keer terug </div>"+
   "<div class='miniBtn'id='toDagtrip' >Naar dagtrip </div>"+
   "</div></div>";
+  currentZIndex++;
   $('body').prepend(item);
   $("#toDagtrip").click(function(){
     $(this).parent().remove();
@@ -551,12 +553,12 @@ function updateDagTripCount(){
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:66px; background-color:#2a2b3c;width:100%;'>";
+  var item = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; margin-top:66px; background-color:#2a2b3c;width:100%;'>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
-
+  currentZIndex++;
   
 
-  item+="<div class='miniBtn' id='verrasMij'>Veras mij</div>";
+  item+="<div class='miniBtn' id='verrasMij'>Verras mij</div>";
   item+="<div class='miniBtn' id='maakLeeg'>Leegmaken</div>";
   
   item +=" </div>";
@@ -579,8 +581,23 @@ function showDagTrip(){
       showDetailPage();
     })
   }
+  var currentProcent = Math.round((favorites.length*20)/100*78);
+  console.log(currentProcent);
+
   item = "<div class='terugBtn' style='float:none;' id='keerTerug'>Terug</div>";
+
+  item+= "<div id='oranjeZee' style='width:0%;background-image:url(assets/images/golfBeige.png);' class='boottrip'>"+
+    "<img id='deBoot' src='assets/images/boot.png' style='visibility:hidden;' width='28.5'></div>"+
+    "<div id='blauweZee' style='width:78% ;margin-left:0; ' class='boottrip'>"+
+  "<img id='deBoot' src='assets/images/boot.png' width='28.5' ></div>";
   $("#dagTripDiv").prepend(item);
+
+
+  setTimeout(function(){
+    $("#oranjeZee").css('width',currentProcent+"%");
+    $("#blauweZee").css('width',(78-currentProcent)+"%");
+  },200);
+
 
   $("#maakLeeg").click(function(){
     $(this).parent().remove();
