@@ -13,6 +13,30 @@ $(document).ready(init);
 
   setTimeout( window.scrollTo(0,10),1);
   console.log(start);
+  var homeScreen = '<div style="position:absolute;background-color:#2a2b3c;"><div id="Firstcontainer"><div id="hartje"></div>'+
+      '<h1>Zin in wat romantiek?</h1>'+
+      '<p>Lovely Oostende laat je erg snel een gezellige dagtrip plannen!</p>'+
+        '<div id="removeHomeScreen" class="btn">Maak je eigen dagtrip</div>'+
+       
+        '<h1>Enige haast?</h1>'+
+        '<p class="smallP">Laat ons jullie dag uitstippelen.</p>'+
+        '<div id="ramdomTrip" class="btn small">ok, verras ons ! </div>'+
+    '</div></div>';
+  $("body").prepend(homeScreen);
+  $("#removeHomeScreen").click(function(){
+      $(this).parent().remove();
+
+    createOwnScreen();
+  })
+  $("#ramdomTrip").click(function(){
+     $(this).parent().remove();
+     createOwnScreen();
+     createRandomDagTrip();
+     showDagTrip();
+  })
+  
+};
+function createOwnScreen(){
   $('#container .zintuig').click(navigate);
   $(".dagtripIcon").click(showDagTrip);
   if(localStorage.getItem('favorites')){
@@ -36,10 +60,8 @@ $(document).ready(init);
   }
 //createRandomDagTrip();
   updateDagTripCount();
-
-};
-    
-  function getNewVenues(){
+}    
+function getNewVenues(){
   localStorage.setItem('lastTime',(new Date().getTime())/1000)
     console.log("Venues nog in te laden");
 
@@ -107,10 +129,7 @@ function createRandomDagTrip(){
     
   }
   console.log(randomDagTrip);
-
-
-
-  //localStorage.setItem('favorites',JSON.stringify(randomDagTrip));
+  localStorage.setItem('favorites',JSON.stringify(randomDagTrip));
 
 }
 function berekenDichtsteVenue(){
@@ -499,11 +518,13 @@ function updateDagTripCount(){
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:66px; background-color:#2a2b3c;width:100%;height:100% '>";
+  var item = "<div id='dagTripDiv' style='position:absolute; margin-top:66px; background-color:#2a2b3c;width:100%;'>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   
   item+="<div class='miniBtn' id='keerTerug'> keer terug </div>";
+  item+="<div class='miniBtn' id='verrasMij'>Veras mij</div>";
+  item+="<div class='miniBtn' id='maakLeeg'>Maak dag leeg</div>";
   
   item +=" </div>";
 
@@ -514,7 +535,7 @@ function showDagTrip(){
 
     var itemke="<div class='dagtripItem' id='dagTripItemKe"+element.id+"'>"+
     "<div class='dagtripIcontje'>F2</div>"+
-    "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div>"+
+    "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='17'></div>"+
     "<div class='dagtripColor'></div>"+
     "</div>";
     $("#dagTripDiv").prepend(itemke);
@@ -525,7 +546,18 @@ function showDagTrip(){
       showDetailPage();
     })
   }
+  $("#maakLeeg").click(function(){
+    $(this).parent().remove();
+    localStorage.setItem('favorites',JSON.stringify(new Array()));
+    
+    updateDagTripCount();
 
+  })
+  $("#verrasMij").click(function(){
+    $(this).parent().remove();
+    createRandomDagTrip();
+    showDagTrip();
+  })
   $("#keerTerug").click(function(){
     $(this).parent().remove();
     return false;

@@ -248,7 +248,14 @@ h1{
       float: left; 
       margin-left: 0%;  
     }
+    .infoBarArrowTrip{
+      height: 55px;
+      width: 9%;
+      position: absolute;
+      margin-top: 5%;
+      right:20px;
 
+    }
     .infoBarArrow{
       height: 55px;
       width: 9%;
@@ -489,5 +496,7 @@ ul{
   width: 100%;
   height: 100%;
 }
-
+#hartje{
+  height:100px;
+}
 /*STYLE CSS */
