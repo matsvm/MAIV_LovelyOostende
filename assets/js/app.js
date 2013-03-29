@@ -417,6 +417,7 @@ function favorietVerwijderen(){
 
 }
 function showDetailPage(){
+  
   console.log("Click on title");
   console.log(selectedVenue);
   var item= "<div class='detailPage' style='background-color:#2a2b3c;position:absolute;z-index:"+currentZIndex+";'><div id='vorige' class='terugBtn'>Terug</div><div class='info' style='width:78%;padding-top:0px'>"+selectedVenue.name+"</div>"+
@@ -612,16 +613,15 @@ function showDagTrip(){
     var nieuwElement = favorites[i];
       console.log(nieuwElement);
 
-    var itemke="<div class='dagtripItem' id='dagTripItemKe"+nieuwElement.id+"'>"+
+    var itemke="<div class='dagtripItem' data='"+i+"' id='dagTripItemKe"+nieuwElement.id+"'>"+
     "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+nieuwElement.categoryTekst+".png' width=100%></div>"+
     "<div class='dagtripTitel'><h2>"+ nieuwElement.name+"</h2><p>"+ nieuwElement.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
     "<div class='dagtripColor' style='background-color:"+nieuwElement.catColor+"'></div>"+
     "</div>";
     $("#dagTripDiv").prepend(itemke);
-    $('#dagTripItemKe'+nieuwElement.id).click(function(){
+    $('#dagTripItemKe'+nieuwElement.id).click(function(e){
       console.log("Click on element uit lijst");
-      selectedVenue = nieuwElement;
-      console.log($(this));
+      selectedVenue= favorites[$(this).attr("data")];
       showDetailPage();
     })
   }
