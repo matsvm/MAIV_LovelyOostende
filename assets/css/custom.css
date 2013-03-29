@@ -166,18 +166,19 @@ h1{
     }
 
     .terugBtn{
+      float:left;
       width: 21%;
       height: 60px;
       font-size: 0.76em;
-      font-weight: 700;
       text-align: center;
-      color: #ffd597;
-      line-height: 60px;
+      color: #fbffd1;
+      line-height: 38px;
+      padding-left: 3px;
       background-image: url("../images/backBtn.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 55px;
-
+      font-weight: 400;
     }
 
 .boottrip{
@@ -186,13 +187,9 @@ h1{
   background-image: url("../images/golfBlauw.png");
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: 14px;
-}    
-
-.boottrip img{
-  /*MARGIN LEFT afstand voor de aantal dagtrips*/
-  margin-left:30px;
+  background-size: 14px; 
 }
+
 
 /*BEGIN DAGTRIP*/
 .dagtripItem{
@@ -272,7 +269,7 @@ h1{
 
     .infoBarIV{
       height: 75px;
-      width: 66%;
+      width: 58%;
       display: inline-block;
       float: left; 
       margin-left: 0%;  
@@ -287,7 +284,7 @@ h1{
     }
     .infoBarArrow{
       height: 55px;
-      width: 9%;
+      width: 18%;
       float: right;
       margin-top: 5%;
       margin-right: 2%;
@@ -431,6 +428,62 @@ ul{
 }
 /*END STARTPAGE*/
 
+.tip {
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.4s;
+  /* Safari and Chrome */
+  -o-transition: all 0.4s;
+  /* Opera */
+ bottom: 0;
+   position:fixed; 
+  z-index:5;
+  margin-top:66px;
+  color:#363747;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.tip.einde{
+  opacity:0;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  /* Firefox 4 */
+  -webkit-transition: all 1s;
+  /* Safari and Chrome */
+  -o-transition: all 1s;
+  /* Opera */
+}
+.tip.start{
+  bottom: -200px;
+transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.4s;
+  /* Safari and Chrome */
+  -o-transition: all 0.4s;
+  /* Opera */
+
+}
+
+.tip .roundedPopup{
+  color:#363747;
+  font-weight: bolder;
+    background-color: #ff5f48;
+
+}
+.tip .bottomTip{
+background-color: #ff5f48;
+width: 80%;
+font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+text-align: center;
+padding-right: 10%;
+padding-left: 10%;
+ font-weight: bold;
+display: inline-block;
+
+}
 
 /*POPUP*/
 .roundedPopup{
@@ -484,12 +537,13 @@ ul{
   overflow: scroll;
   overflow-y: hidden;
   height: 139px;
+
 }
 
-/* line 18, ../sass/custom.scss */
-#infoContent {
-  margin-top: 0px;
-  
+/* line 27, ../sass/custom.scss */
+.venue.up{
+  top:-30px;
+  position: relative;
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   /* Firefox 4 */
@@ -498,10 +552,8 @@ ul{
   -o-transition: all 0.4s;
   /* Opera */
 }
-
-/* line 27, ../sass/custom.scss */
-#infoContent.verborgen {
-  margin-top: -150px;
+.venue.verborgen {
+  margin-top: 100px;
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   /* Firefox 4 */
@@ -512,14 +564,20 @@ ul{
 }
 
 /* line 36, ../sass/custom.scss */
-.venue {
-  
+.venue{
+   top: 0px;
+    transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
   height:139px;
-  margin-left: 0px;
   display: inline-block;
+  position: relative;
+
 }
-
-
 
 /*STYLE CSS */
 #Firstcontainer{
@@ -536,5 +594,5 @@ ul{
 }    
 
 /*ANIMATE*/
-            
+        
 /*END ANIMATE*/
