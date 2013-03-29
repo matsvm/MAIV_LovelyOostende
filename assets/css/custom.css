@@ -544,8 +544,28 @@ display: inline-block;
 }
 
 
+.min{
+  background-image: url("../images/verwijderen.png");
+  background-repeat: no-repeat;
+  background-size: 36px;
+  width: 39px;
+  height: 35px;
+  margin-left: 25px;
+  margin-top: -3px;
+  float: left;  
+}
 
-
+.plus{
+  background-image: url("../images/toevoegen.png");
+  background-repeat: no-repeat;
+  background-size: 36px;
+  width: 39px;
+  height: 35px;
+  margin-left: 25px;
+  margin-top: -3px;
+  /*position: absolute;*/
+  float: left;
+}
 
 /* line 11, ../sass/custom.scss */
 #subContent {
