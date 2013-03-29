@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-28 23:13:47
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 00:34:55
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:7821980775154c09b3dd0e4-62247886%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364508734,
+      1 => 1364513667,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_5154c09b3e6931_31698087',
   'variables' => 
   array (
     'content' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5154c09b3e6931_31698087',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5154c09b3e6931_31698087')) {function content_5154c09b3e6931_31698087($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -73,12 +73,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
     </div>
     <ul class="tiles">
-        <li class="zintuig"><p>Dichtbij</p></li>
-        <li class="zintuig"><p>Zien</p></li>
-        <li class="zintuig"><p>Proeven</p></li>
-        <li class="zintuig"><p>Ruiken</p></li>
-        <li class="zintuig"><p>Voelen</p></li>
-        <li class="zintuig"><p>Horen</p></li>
+        
+        <li><p class="zintuig dichtbij">Dichtbij </p></li>
+        <li><p class="zintuig zien">Zien</p></li>
+        <li><p class="zintuig proeven">Proeven</p></li>
+        <li><p class="zintuig ruiken">Ruiken</p></li>
+        <li><p class="zintuig voelen">Voelen</p></li>
+        <li><p class="zintuig horen">Horen</p></li>
+    </ul>
     </ul>
     </div>
    
