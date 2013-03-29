@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 02:30:01
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 02:39:19
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:10407624745154ed600fd6a0-11018093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364520570,
+      1 => 1364521079,
       2 => 'file',
     ),
   ),
@@ -68,7 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="17"></div>
             <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
-                    <div class="terugBtn"><p>TERUG</p></div>
+            <div class="terugBtn"><p>TERUG</p></div>
 
         <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
