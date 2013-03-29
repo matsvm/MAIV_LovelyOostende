@@ -37,6 +37,11 @@ $("body").prepend(tip);
 
     $(".tip").addClass('einde')
   },5000);
+
+  setTimeout(function(){
+
+    $(".tip").remove()
+  },6000);
   $("#removeHomeScreen").click(function(){
       $(this).parent().remove();
 
@@ -209,30 +214,29 @@ function callback(response, status) {
 
 function changeDisplay(){
   $('#subContent').empty();
-  
   var itemke = '<div class="infoBarI">Kies een attractie hieronder om deze toe te voegen.</div>'+
               '<div class="infoBarII">Je kan de attracties filteren per zintuig of per huidige locatie</div>';
   $('#infoContent').append(itemke);         
   for(var i =0;i<currentVenues.length;i++){
     var element = currentVenues[i];
     
-      var item ="<span style='margin-left:500px' id='venue"+element.id+"' class='venue'><h3 style='display:none;'>"+element.name+"</h3><img style='max-width:100%; max-height:100%;' src='assets/images/attracties/proeven/"+element.name+".png'> "+
+      var item ="<div id='venue"+element.id+"' class='venue verborgen'><h3 style='display:none;'>"+element.name+"</h3><img style='max-width:100%; max-height:100%;' src='assets/images/attracties/proeven/"+element.name+".png'> "+
 
-        "</span>";
+        "</div>";
         $("#subContent").append(item);
 
 
         $("#venue"+element.id).click(clickVenuehandler);
+        setTimeout(function(){
 
-        $("#venue"+element.id).animate({
-        'margin-left': '0px'
-        }, 300, function() {
-        // Animation complete.
-        });
+            $(".venue").removeClass('verborgen')
+          },500);
 
 
         
     }
+    
+        
     return false;
   }
 
@@ -302,6 +306,7 @@ function clickVenuehandler(){
   //console.log($(this).text());
   if(selectedVenue){
     $("#venue"+selectedVenue.id+" img").attr('src',"assets/images/attracties/proeven/"+selectedVenue.name+".png");
+    $("#venue"+selectedVenue.id).removeClass('up');
   };
   var element = null;
   for (var i = 0; i < currentVenues.length; i++) {
@@ -311,6 +316,7 @@ function clickVenuehandler(){
         console.log("Found it!");
         selectedVenue = element;
         $("#venue"+selectedVenue.id+" img").attr('src',"assets/images/attracties/proeven/"+element.name+"-touched.png");
+        $("#venue"+selectedVenue.id).addClass('up');
         var item= "<div class='infoBarIII'>FOTO</div><div class='showDetail'><div class='infoBarIV'><h2>"+element.name+"</h2><p>"+element.adress+"</p></div><div class='infoBarArrow'><img src='assets/images/arrow.png' width='40'></div></div>";
 //            <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div><div class='infoBarItem'><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p></div>";
         var favorites = JSON.parse(localStorage.getItem('favorites'));

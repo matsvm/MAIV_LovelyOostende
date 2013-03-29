@@ -537,12 +537,13 @@ display: inline-block;
   overflow: scroll;
   overflow-y: hidden;
   height: 139px;
+
 }
 
-/* line 18, ../sass/custom.scss */
-#infoContent {
-  margin-top: 0px;
-  
+/* line 27, ../sass/custom.scss */
+.venue.up{
+  top:-30px;
+  position: relative;
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   /* Firefox 4 */
@@ -551,10 +552,8 @@ display: inline-block;
   -o-transition: all 0.4s;
   /* Opera */
 }
-
-/* line 27, ../sass/custom.scss */
-#infoContent.verborgen {
-  margin-top: -150px;
+.venue.verborgen {
+  margin-top: 100px;
   transition: all 0.4s;
   -moz-transition: all 0.4s;
   /* Firefox 4 */
@@ -565,14 +564,20 @@ display: inline-block;
 }
 
 /* line 36, ../sass/custom.scss */
-.venue {
-  
+.venue{
+   top: 0px;
+    transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.5s;
+  /* Safari and Chrome */
+  -o-transition: all 0.5s;
+  /* Opera */
   height:139px;
-  margin-left: 0px;
   display: inline-block;
+  position: relative;
+
 }
-
-
 
 /*STYLE CSS */
 #Firstcontainer{
