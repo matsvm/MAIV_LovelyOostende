@@ -454,7 +454,7 @@ function showDetailPage(){
         }else{
           if(favorites.length<5){
             console.log("De plaats zit er nog niet in");
-            item += "<div class='infoBarV'><div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>+<div class='plus'></div>toevoegen aan dagtrip</div></div>";
+            item += "<div class='infoBarV'><div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'><div class='plus'></div>toevoegen aan dagtrip</div></div>";
            $("body").prepend(item);
            $("#likeDetailKlik"+selectedVenue.id).click(function(){
             //$(this).parent().remove();
