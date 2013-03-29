@@ -187,13 +187,9 @@ h1{
   background-image: url("../images/golfBlauw.png");
   background-repeat: repeat-x;
   background-position: bottom;
-  background-size: 14px;
-}    
-
-.boottrip img{
-  /*MARGIN LEFT afstand voor de aantal dagtrips*/
-  margin-left:30px;
+  background-size: 14px; 
 }
+
 
 /*BEGIN DAGTRIP*/
 .dagtripItem{
@@ -537,5 +533,5 @@ ul{
 }    
 
 /*ANIMATE*/
-            
+        
 /*END ANIMATE*/
