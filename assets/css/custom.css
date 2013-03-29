@@ -211,10 +211,9 @@ h1{
     .dagtripIcontje{
       width: 20%;
       height: 85px;
-      float: left;
+      float: right;
       display: inline-block;  
       line-height: 20px;
-      background-color: #ffd597;
     }
     .dagtripTitel{
       width: 50%;
@@ -283,7 +282,7 @@ h1{
       width: 58%;
       display: inline-block;
       float: left; 
-      margin-left: 0%;  
+      margin-left: 3%;  
     }
     .infoBarArrowTrip{
       height: 55px;
@@ -294,11 +293,11 @@ h1{
 
     }
     .infoBarArrow{
-      height: 55px;
-      width: 18%;
+      
+      width: 17%;
       float: right;
       margin-top: 5%;
-      margin-right: 2%;
+
     }
 
     .infoBarArrow img{
@@ -308,8 +307,12 @@ h1{
 
     .infoBarV{
       width: 100%;
-      margin-top: 5%;
+      margin-top: 4%;
       display: inline-block;
+    }
+
+    .infoBarV .Minibutten{
+      width: 92%;
     }
 
 .infoBar p,h2{
@@ -498,7 +501,7 @@ display: inline-block;
 
 /*POPUP*/
 .roundedPopup{
-  width: 80%;
+  width: 94%;
   height: 2%;
   display: inline-block;
   background-color: #454656;
@@ -510,7 +513,11 @@ display: inline-block;
   text-align: center;
   letter-spacing: 0.1em;  
   padding: 15px 0.65px 15px 0.65px;
-  margin-left: 10%;
+  margin-left: 3%;
+}
+
+#popUp p{
+  margin:5%; 
 }
 
 .roundedPopupMini{
