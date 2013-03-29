@@ -373,14 +373,14 @@ function clickVenuehandler(){
         }
         if(inList==true){
           console.log("De plaats zit er reeds in");
-          item += "<div class='infoBarV'><div id='likeKlik"+element.id+"' class='Minibutten'>-verwijderen uit dagtrip</div></div>";
+          item += "<div class='infoBarV'><div id='likeKlik"+element.id+"' class='Minibutten'><div class='min'></div>verwijderen uit dagtrip</div></div>";
           $("#infoContent").append(item);
 
           $("#likeKlik"+element.id).click(favorietVerwijderen);
         }else{
           if(favorites.length<5){
             console.log("De plaats zit er nog niet in");
-            item += "<div class='infoBarV'><div id='likeKlik"+element.id+"' class='Minibutten'>+ toevoegen aan dagtrip</div></div>";
+            item += "<div class='infoBarV'><div id='likeKlik"+element.id+"' class='Minibutten'><div class='plus'></div>toevoegen aan dagtrip</div></div>";
             $("#infoContent").append(item);
             $("#likeKlik"+element.id).click(likeKlik);
            }else{
@@ -418,6 +418,7 @@ function favorietVerwijderen(){
 }
 function showDetailPage(){
   console.log("Click on title");
+  console.log(selectedVenue);
   var item= "<div class='detailPage' style='background-color:#2a2b3c;position:absolute;z-index:"+currentZIndex+";'><div id='vorige' class='terugBtn'>Terug</div><div class='info' style='width:78%;padding-top:0px'>"+selectedVenue.name+"</div>"+
   "<div class='overzicht'>"+
             "<div class='infoBarIV' style='width:auto'>"+
@@ -445,14 +446,14 @@ function showDetailPage(){
         }
         if(inList==true){
           console.log("De plaats zit er reeds in");
-          item += "<div class='infoBarV'><div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>-verwijderen uit dagtrip</div></div>";
+          item += "<div class='infoBarV'><div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'><div class='min'></div>Verwijderen uit dagtrip</div></div>";
           $("body").prepend(item);
 
           $("#likeDetailKlik"+selectedVenue.id).click(favorietVerwijderen);
         }else{
           if(favorites.length<5){
             console.log("De plaats zit er nog niet in");
-            item += "<div class='infoBarV'><div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>+ toevoegen aan dagtrip</div></div>";
+            item += "<div class='infoBarV'><div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>+<div class='plus'></div>toevoegen aan dagtrip</div></div>";
            $("body").prepend(item);
            $("#likeDetailKlik"+selectedVenue.id).click(function(){
             //$(this).parent().remove();
@@ -570,14 +571,14 @@ function updateDagTripCount(){
       }
     if(inList==true){
       console.log("[Change Button] De plaats zit er reeds in");
-      newButton = "<div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>-verwijderen uit dagtrip</div>";
+      newButton = "<div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'><div class='min'></div>verwijderen uit dagtrip</div>";
       infoBarV.append(newButton);
 
       $("#likeDetailKlik"+selectedVenue.id).click(favorietVerwijderen);
     }else{
         console.log("[Change Button] De plaats zit er nog niet in");
 
-        newButton = "<div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'>+ toevoegen aan dagtrip</div>";
+        newButton = "<div id='likeDetailKlik"+selectedVenue.id+"' class='Minibutten'><div class='plus'></div>toevoegen aan dagtrip</div>";
         infoBarV.append(newButton);
 
        $("#likeDetailKlik"+selectedVenue.id).click(function(){
@@ -595,32 +596,32 @@ function updateDagTripCount(){
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var itemMenu = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; background-color:#2a2b3c;width:100%;min-height:550px'>";
+  var item = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; background-color:#2a2b3c;width:100%;min-height:550px'>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   currentZIndex++;
   
 
-  itemMenu+="<div class='miniBtn' id='verrasMij'>Verras mij</div>";
-  itemMenu+="<div class='miniBtn' id='maakLeeg'>Leegmaken</div>";
+  item+="<div class='miniBtn' id='verrasMij'>Verras mij</div>";
+  item+="<div class='miniBtn' id='maakLeeg'>Leegmaken</div>";
   
-  itemMenu +=" </div>";
+  item +=" </div>";
 
-  $('body').prepend(itemMenu);
+  $('body').prepend(item);
 
   for(var i=0;i<favorites.length;i++){
-    var favElement = favorites[i];
-      console.log(favElement);
-      console.log(favorites);
-    var itemke="<div class='dagtripItem' id='dagTripItemTje"+favElement.id+"'>"+
-      "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+favElement.categoryTekst+".png' width=100%></div>"+
-      "<div class='dagtripTitel'><h2>"+favElement.name+"</h2><p>"+favElement.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
-      "<div class='dagtripColor' style='background-color:"+favElement.catColor+"'></div>"+
+    var nieuwElement = favorites[i];
+      console.log(nieuwElement);
+
+    var itemke="<div class='dagtripItem' id='dagTripItemKe"+nieuwElement.id+"'>"+
+    "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+nieuwElement.categoryTekst+".png' width=100%></div>"+
+    "<div class='dagtripTitel'><h2>"+ nieuwElement.name+"</h2><p>"+ nieuwElement.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
+    "<div class='dagtripColor' style='background-color:"+nieuwElement.catColor+"'></div>"+
     "</div>";
     $("#dagTripDiv").prepend(itemke);
-    $('#dagTripItemTje'+favElement.id).click(function(){
+    $('#dagTripItemKe'+nieuwElement.id).click(function(){
       console.log("Click on element uit lijst");
-      selectedVenue = favElement;
-      console.log(favElement);
+      selectedVenue = nieuwElement;
+      console.log($(this));
       showDetailPage();
     })
   }
@@ -630,13 +631,13 @@ function showDagTrip(){
 
 
 
-  itemMenu = "<div class='terugBtn' style='float:none;' id='keerTerug'>Terug</div>";
+  item = "<div class='terugBtn' style='float:none;' id='keerTerug'>Terug</div>";
 
-  itemMenu+= "<div id='oranjeZee' style='width:0%;background-image:url(assets/images/golfBeige.png);' class='boottrip'>"+
+  item+= "<div id='oranjeZee' style='width:0%;background-image:url(assets/images/golfBeige.png);' class='boottrip'>"+
     "<img id='deBoot' src='assets/images/boot.png' style='visibility:hidden;' width='28.5'></div>"+
     "<div id='blauweZee' style='width:"+maxWidth+"% ;margin-left:0; ' class='boottrip'>"+
   "<img id='deBoot' src='assets/images/boot.png' width='28.5' ></div>";
-  $("#dagTripDiv").prepend(itemMenu);
+  $("#dagTripDiv").prepend(item);
 
 
   setTimeout(function(){
