@@ -14,7 +14,7 @@ $(document).ready(init);
 
   setTimeout( self.scrollTo(0,10),1);
   console.log(start);
-  var homeScreen = '<div style="position:absolute;background-color:#2a2b3c;"><div id="Firstcontainer"><div id="hartje"></div>'+
+  var homeScreen = '<div style="position:absolute;background-color:#2a2b3c;"><div id="Firstcontainer"><div id="hartje"><img src="assets/images/logo.png" width=110></div>'+
       '<h1>Zin in wat romantiek?</h1>'+
       '<p>Lovely Oostende laat je erg snel een gezellige dagtrip plannen!</p>'+
         '<div id="removeHomeScreen" class="btn">Maak je eigen dagtrip</div>'+
