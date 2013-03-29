@@ -68,7 +68,7 @@ h1{
 
 .Minibutten{
   margin: auto;
-  width: 85%;
+  width: 90%;
   max-width: 350px;
   height: 18%;
   background-color: #ff5f48;
@@ -550,7 +550,7 @@ display: inline-block;
   background-size: 36px;
   width: 39px;
   height: 35px;
-  margin-left: 25px;
+  margin-left: 12px;
   margin-top: -3px;
   float: left;  
 }
@@ -561,7 +561,7 @@ display: inline-block;
   background-size: 36px;
   width: 39px;
   height: 35px;
-  margin-left: 25px;
+  margin-left: 12px;
   margin-top: -3px;
   /*position: absolute;*/
   float: left;
