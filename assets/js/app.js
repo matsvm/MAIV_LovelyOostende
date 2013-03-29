@@ -367,8 +367,8 @@ function showDetailPage(){
         "<div class='kaartBtn'>Kijk op kaart</div>"+
         "<div class='fotoBtn'>Foto's</div>"+
 
-
-        "<a target='_blank' href='https://maps.google.be/maps?q="+selectedVenue.lat+","+selectedVenue.long+"'><div id='map_canvas"+selectedVenue.name+"' class='buildings' style='width:320px; height:200px'>"+
+        
+        "<a target='_blank' href='https://maps.google.be/maps?q="+selectedVenue.lat+","+selectedVenue.long+"'><img style='max-height:100%;max-width:100%;display:none;' src='assets/images/venues/"+selectedVenue.img+"'><div id='map_canvas"+selectedVenue.name+"' class='buildings' style='width:320px; height:200px'>"+
         "</div></a>"+
 
  "<span id='vorige'>Terug</span>";
@@ -406,31 +406,45 @@ function showDetailPage(){
            $("body").prepend(item);
            } 
         }
+        $(".kaartBtn").click(function(){
+          $('a div').attr('style','display:inline-block;style=width:320px; height:200px;');
+          $("a img").attr('style','max-height:100%;max-width:100%;display:none;')
+          getNewMap();
+        })
+        $(".fotoBtn").click(function(){
+          $('a div').attr('style','display:none;');
+
+          $("a img").attr('style','max-height:100%;max-width:100%;display:auto;')
+
+        })
 
   $("#vorige").click(function(){
     $(this).parent().remove();
   })
-  var myLatlng = new google.maps.LatLng(selectedVenue.lat, selectedVenue.long);
-  var myOptions = {
-      zoom: 15,
-      center: myLatlng,
-      draggable:false,
-      disableDefaultUI:true,
-      zoomControl:false,
-      scaleControl:false,
-      scrollwheel: false,
-      disableDoubleClickZoom: true,
+  getNewMap();
+  function getNewMap(){
+    var myLatlng = new google.maps.LatLng(selectedVenue.lat, selectedVenue.long);
+    var myOptions = {
+        zoom: 15,
+        center: myLatlng,
+        draggable:false,
+        disableDefaultUI:true,
+        zoomControl:false,
+        scaleControl:false,
+        scrollwheel: false,
+        disableDoubleClickZoom: true,
 
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
 
-  var map = new google.maps.Map(document.getElementById("map_canvas"+selectedVenue.name),myOptions);
-  var marker = new google.maps.Marker({
-    position: myLatlng,
-    map: map,
-    icon: "assets/images/marker.png",
-    title:"Hello World!"
-  })
+    var map = new google.maps.Map(document.getElementById("map_canvas"+selectedVenue.name),myOptions);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      icon: "assets/images/marker.png",
+      title:"Hello World!"
+    })
+  }
   return false;
 }
 
