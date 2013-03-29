@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 02:39:19
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 07:52:40
          compiled from "smarty_template/index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:10407624745154ed600fd6a0-11018093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1733290144515501f1439af8-30822205%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364521079,
+      1 => 1364539954,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10407624745154ed600fd6a0-11018093',
+  'nocache_hash' => '1733290144515501f1439af8-30822205',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5154ed601909e7_97796758',
+  'unifunc' => 'content_515501f14d3424_61706479',
   'variables' => 
   array (
     'content' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5154ed601909e7_97796758')) {function content_5154ed601909e7_97796758($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_515501f14d3424_61706479')) {function content_515501f14d3424_61706479($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -68,7 +68,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="17"></div>
             <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
+            <div class="infoBarArrow"><img src="assets/images/arrow.png" width="28"></div>
             <div class="terugBtn"><p>TERUG</p></div>
+
+            <div class="boottrip"><img  id="deBoot" src="assets/images/boot.png" width="28.5"></div>
 
         <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
