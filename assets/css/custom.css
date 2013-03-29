@@ -112,6 +112,7 @@ h1{
   margin-top: 5%;
   margin-bottom: 5%;
   margin-left: 3%;
+  bottom: 0px;
 }
 
 /*END BUTTONS*/
@@ -167,6 +168,7 @@ h1{
     }
 
     .terugBtn{
+      border-right: #454656 1px solid;
 
       width: 19%;
       height: 50px;
@@ -174,7 +176,7 @@ h1{
       text-align: center;
       color: #fbffd1;
       line-height: 38px;
-      padding-left: 3px;
+      padding-left: 6px;
       background-image: url("../images/backBtn.png");
       background-repeat: no-repeat;
       background-position: center;
@@ -182,6 +184,10 @@ h1{
       font-weight: 400;
       padding-top: 10px;
       display: inline-block;
+
+      padding-right:1%;
+
+
     }
 
 .boottrip{
