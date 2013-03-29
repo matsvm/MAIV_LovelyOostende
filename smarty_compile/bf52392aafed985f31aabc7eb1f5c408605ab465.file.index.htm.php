@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 08:16:48
+=======
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 08:27:45
+>>>>>>> extra
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1733290144515501f1439af8-30822205%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 =======
@@ -14,7 +18,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     array (
       0 => 'smarty_template/index.htm',
 <<<<<<< HEAD
+<<<<<<< HEAD
       1 => 1364541403,
+=======
+      1 => 1364542059,
+>>>>>>> extra
       2 => 'file',
     ),
   ),
@@ -91,12 +99,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="40"></div>
             <div class="terugBtn"><p>TERUG</p></div>
 
             <div class="boottrip"><img  id="deBoot" src="assets/images/boot.png" width="28.5"></div>
 =======
 >>>>>>> update
+=======
+            <!--<div class="infoBarArrow"><img src="assets/images/arrow.png" width="40"></div>
+            <div class="terugBtn"><p>TERUG</p></div>
+
+            <div class="boottrip"><img  id="deBoot" src="assets/images/boot.png" width="28.5"></div>-->
+>>>>>>> extra
 
         <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 

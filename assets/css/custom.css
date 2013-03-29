@@ -273,7 +273,7 @@ h1{
 
     .infoBarIV{
       height: 75px;
-      width: 66%;
+      width: 58%;
       display: inline-block;
       float: left; 
       margin-left: 0%;  
@@ -288,7 +288,7 @@ h1{
     }
     .infoBarArrow{
       height: 55px;
-      width: 9%;
+      width: 18%;
       float: right;
       margin-top: 5%;
       margin-right: 2%;

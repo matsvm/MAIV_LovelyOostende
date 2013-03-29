@@ -548,7 +548,7 @@ function showDagTrip(){
 
     var itemke="<div class='dagtripItem' id='dagTripItemKe"+element.id+"'>"+
     "<div class='dagtripIcontje'>F2</div>"+
-    "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='17'></div>"+
+    "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
     "<div class='dagtripColor'></div>"+
     "</div>";
     $("#dagTripDiv").prepend(itemke);
