@@ -217,7 +217,7 @@ h1{
     .dagtripIcontje{
       width: 20%;
       height: 85px;
-      float: right;
+      float: left;
       display: inline-block;  
       line-height: 20px;
     }
@@ -566,7 +566,7 @@ display: inline-block;
 
 /* line 27, ../sass/custom.scss */
 .venue.up{
-  top:-30px;
+  top:-10px;
   position: relative;
   transition: all 0.4s;
   -moz-transition: all 0.4s;

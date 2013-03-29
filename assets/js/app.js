@@ -201,25 +201,30 @@ function callback(response, status) {
         switch(allVenues[j].cat){
           case "1":
             allVenues[j].categoryTekst = "Proeven";
+            allVenues[j].catColor = "#ff5f48";
           break;
 
           case "2":
             allVenues[j].categoryTekst = "Zien";
+            allVenues[j].catColor = "#ffd597";
 
           break;
 
           case "3":
             allVenues[j].categoryTekst = "Ruiken";
+            allVenues[j].catColor = "#57c2b2";
 
           break;
 
           case "4":
             allVenues[j].categoryTekst = "Voelen";
+            allVenues[j].catColor = "#e34a66";
 
           break;
 
           case "5":
             allVenues[j].categoryTekst = "Horen";
+            allVenues[j].catColor = "#a16bad";
 
           break;
         }
@@ -413,10 +418,10 @@ function favorietVerwijderen(){
 }
 function showDetailPage(){
   console.log("Click on title");
-  var item= "<div class='detailPage' style='background-color:#525263;position:absolute;z-index:"+currentZIndex+";'><div id='vorige' class='terugBtn'>Terug</div><div class='info' style='width:78%;padding-top:0px'>"+selectedVenue.name+"</div>"+
+  var item= "<div class='detailPage' style='background-color:#2a2b3c;position:absolute;z-index:"+currentZIndex+";'><div id='vorige' class='terugBtn'>Terug</div><div class='info' style='width:78%;padding-top:0px'>"+selectedVenue.name+"</div>"+
   "<div class='overzicht'>"+
             "<div class='infoBarIV' style='width:auto'>"+
-                    "<img src='assets/images/attracties/"+selectedVenue.name+".png' style='float:left;padding:5px'width=140>"+
+                    "<img src='assets/images/attracties/"+selectedVenue.name+".png' style='float:left;padding:5px' width=140>"+
                     "<p>"+selectedVenue.adress+"</p>"+
                     "<p>"+selectedVenue.description+"</p>"+
            "</div>"+
@@ -606,15 +611,15 @@ function showDagTrip(){
     var element = favorites[i];
 
     var itemke="<div class='dagtripItem' id='dagTripItemKe"+element.id+"'>"+
-    "<div class='dagtripIcontje'>F2</div>"+
+    "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+element.categoryTekst+".png' width=100%></div>"+
     "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
-    "<div class='dagtripColor'></div>"+
+    "<div class='dagtripColor' style='background-color:"+element.catColor+"'></div>"+
     "</div>";
     $("#dagTripDiv").prepend(itemke);
     $('#dagTripItemKe'+element.id).click(function(){
       console.log("Click on element uit lijst");
       selectedVenue = element;
-
+      console.log(element);
       showDetailPage();
     })
   }
@@ -650,6 +655,8 @@ function showDagTrip(){
     $(this).parent().remove();
     createRandomDagTrip();
     showDagTrip();
+    updateDagTripCount();
+
   })
   $("#keerTerug").click(function(){
     $(this).parent().remove();
