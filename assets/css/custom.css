@@ -166,6 +166,7 @@ h1{
     }
 
     .terugBtn{
+      float:left;
       width: 21%;
       height: 60px;
       font-size: 0.76em;

@@ -355,9 +355,9 @@ function favorietVerwijderen(){
 }
 function showDetailPage(){
   console.log("Click on title");
-  var item="<div class='detailPage' style='background-color:#525263;position:absolute;z-index:5; margin-top:66px;'>"+
+  var item= "<div class='detailPage' style='background-color:#525263;position:absolute;z-index:5; margin-top:66px;'><div id='vorige' class='terugBtn'>Terug</div>"+
   "<div class='overzicht'>"+
-            "<div class='infoBarIV'>"+
+            "<div class='infoBarIV' style='float:right;'>"+
                     "<h2>"+selectedVenue.name+"</h2>"+
                     "<p>"+selectedVenue.adress+"</p>"+
                     "<p>"+selectedVenue.description+"</p>"+
@@ -369,9 +369,8 @@ function showDetailPage(){
 
         
         "<a target='_blank' href='https://maps.google.be/maps?q="+selectedVenue.lat+","+selectedVenue.long+"'><img style='max-height:100%;max-width:100%;display:none;' src='assets/images/venues/"+selectedVenue.img+"'><div id='map_canvas"+selectedVenue.name+"' class='buildings' style='width:320px; height:200px'>"+
-        "</div></a>"+
+        "</div></a>";
 
- "<span id='vorige'>Terug</span>";
         var favorites = JSON.parse(localStorage.getItem('favorites'));
 
         var inList=false;
@@ -536,9 +535,9 @@ function showDagTrip(){
   var favorites = JSON.parse(localStorage.getItem('favorites'));
 
   
-  item+="<div class='miniBtn' id='keerTerug'> keer terug </div>";
+
   item+="<div class='miniBtn' id='verrasMij'>Veras mij</div>";
-  item+="<div class='miniBtn' id='maakLeeg'>Maak dag leeg</div>";
+  item+="<div class='miniBtn' id='maakLeeg'>Leegmaken</div>";
   
   item +=" </div>";
 
@@ -560,6 +559,9 @@ function showDagTrip(){
       showDetailPage();
     })
   }
+  item = "<div class='terugBtn' style='float:none;' id='keerTerug'>Terug</div>";
+  $("#dagTripDiv").prepend(item);
+
   $("#maakLeeg").click(function(){
     $(this).parent().remove();
     localStorage.setItem('favorites',JSON.stringify(new Array()));
