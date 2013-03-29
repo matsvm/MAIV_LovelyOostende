@@ -11,7 +11,7 @@ $(document).ready(init);
   function init(){
   console.log("Dom Loaded!");
 
-  setTimeout( window.scrollTo(0,10),1);
+  setTimeout( self.scrollTo(0,10),1);
   console.log(start);
   var homeScreen = '<div style="position:absolute;background-color:#2a2b3c;"><div id="Firstcontainer"><div id="hartje"></div>'+
       '<h1>Zin in wat romantiek?</h1>'+
@@ -23,6 +23,20 @@ $(document).ready(init);
         '<div id="ramdomTrip" class="btn small">ok, verras ons ! </div>'+
     '</div></div>';
   $("body").prepend(homeScreen);
+
+var tip="<div class='tip start'><div id='popUp'>"+
+  "<div class='roundedPopup roundedPopupMini'><p>TIP</p></div>"+
+        "<div class='bottomTip'><p>Voeg onze site toe aan je beginscherm voor een betere ervaring!</p><p><img  src='assets/images/arrowDown.png' width=10/></p></div>";
+
+$("body").prepend(tip);
+ setTimeout(function(){
+    ($(".tip").removeClass("start"))
+  },2000);
+
+  setTimeout(function(){
+
+    $(".tip").addClass('einde')
+  },5000);
   $("#removeHomeScreen").click(function(){
       $(this).parent().remove();
 

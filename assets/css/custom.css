@@ -428,6 +428,62 @@ ul{
 }
 /*END STARTPAGE*/
 
+.tip {
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.4s;
+  /* Safari and Chrome */
+  -o-transition: all 0.4s;
+  /* Opera */
+ bottom: 0;
+   position:fixed; 
+  z-index:5;
+  margin-top:66px;
+  color:#363747;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.tip.einde{
+  opacity:0;
+  transition: all 1s;
+  -moz-transition: all 1s;
+  /* Firefox 4 */
+  -webkit-transition: all 1s;
+  /* Safari and Chrome */
+  -o-transition: all 1s;
+  /* Opera */
+}
+.tip.start{
+  bottom: -200px;
+transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.4s;
+  /* Safari and Chrome */
+  -o-transition: all 0.4s;
+  /* Opera */
+
+}
+
+.tip .roundedPopup{
+  color:#363747;
+  font-weight: bolder;
+    background-color: #ff5f48;
+
+}
+.tip .bottomTip{
+background-color: #ff5f48;
+width: 80%;
+font-size: 1.018em; /* 26 * 1.618 = 42.068 */
+text-align: center;
+padding-right: 10%;
+padding-left: 10%;
+ font-weight: bold;
+display: inline-block;
+
+}
 
 /*POPUP*/
 .roundedPopup{
