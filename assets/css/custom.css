@@ -113,6 +113,7 @@ h1{
   margin-bottom: 5%;
   margin-left: 3%;
   bottom: 0px;
+
 }
 
 /*END BUTTONS*/
@@ -151,7 +152,7 @@ h1{
       height: 100%;
       width: 20%;
       display: inline-block;
-      font-family: "susaRegular";
+
       float: right;
       background-image: url("../images/dagTripIconBig.png");
       background-repeat: no-repeat;
@@ -163,7 +164,7 @@ h1{
 
     .dagtripIcon span{
       color: #ff5f48;
-        font-family: 'Maven Pro', sans-serif;
+      font-family: 'Maven Pro', sans-serif;
       font-weight: 700;
     }
 
@@ -229,6 +230,9 @@ h1{
       margin-left: 3%;  
       line-height: 20px;
     }
+
+  ding:0; margin: 0;
+  }
 
     .dagtripColor{
       width: 2%;
@@ -396,56 +400,45 @@ ul{
   margin: 0;
 }
 
+.zintuig{
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-size: 35px;
+}
+
+.dichtbij, .zien{ padding-top: -10px;}
 
 .dichtbij{
   background-image: url("../images/menuIcons/iconDichtbij.png");
-  background-repeat: no-repeat;
-  background-position:  center top;
-  padding-top: -10px;
-  background-size: 35px;
   color: #676772;
 }
 
 .zien{
   background-image: url("../images/menuIcons/iconZien.png");
-  background-repeat: no-repeat;
-  background-position:  center top;
-  padding-top: -10px;
-  background-size: 35px;
   color: #ffd597;
 }
 
 .proeven{
   background-image: url("../images/menuIcons/iconProef.png");
-  background-repeat: no-repeat;
-  background-position:  center top;
-  background-size: 35px;
   color: #ff5f48;
 }
 
 .ruiken{
   background-image: url("../images/menuIcons/iconRuik.png");
-  background-repeat: no-repeat;
-  background-position:  center top;
-  background-size: 35px;
   color: #57c2b2;
 }
 
 .voelen{
   background-image: url("../images/menuIcons/iconVoel.png");
-  background-repeat: no-repeat;
-  background-position:  center top;
-  background-size: 35px;
   color: #e34a66;
 }
 
 .horen{
   background-image: url("../images/menuIcons/iconHoor.png");
-  background-repeat: no-repeat;
-  background-position:  center top;
-  background-size: 35px;
   color: #a16bad;
 }
+
+
 /*END STARTPAGE*/
 
 .tip {
