@@ -1,37 +1,29 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 00:34:55
-=======
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 00:46:04
->>>>>>> f
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 02:30:01
          compiled from "smarty_template/index.htm" */ ?>
-<?php /*%%SmartyHeaderCode:7821980775154c09b3dd0e4-62247886%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10407624745154ed600fd6a0-11018093%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-<<<<<<< HEAD
-      1 => 1364513667,
-=======
-      1 => 1364514362,
->>>>>>> f
+      1 => 1364520570,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '7821980775154c09b3dd0e4-62247886',
+  'nocache_hash' => '10407624745154ed600fd6a0-11018093',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_5154c09b3e6931_31698087',
+  'unifunc' => 'content_5154ed601909e7_97796758',
   'variables' => 
   array (
     'content' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5154c09b3e6931_31698087')) {function content_5154c09b3e6931_31698087($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5154ed601909e7_97796758')) {function content_5154ed601909e7_97796758($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -76,17 +68,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="17"></div>
             <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
+                    <div class="terugBtn"><p>TERUG</p></div>
 
         <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
 
     </div>
     <ul class="tiles">
         
-<<<<<<< HEAD
-        <li><p class="zintuig dichtbij">Dichtbij </p></li>
-=======
         <li><p class="zintuig dichtbij">Dichtbij</p></li>
->>>>>>> f
         <li><p class="zintuig zien">Zien</p></li>
         <li><p class="zintuig proeven">Proeven</p></li>
         <li><p class="zintuig ruiken">Ruiken</p></li>
