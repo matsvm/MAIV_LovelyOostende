@@ -423,7 +423,7 @@ function showDetailPage(){
   var item= "<div class='detailPage' style='background-color:#2a2b3c;position:absolute;z-index:"+currentZIndex+";'><div id='vorige' class='terugBtn'>Terug</div><div class='info' style='width:78%;padding-top:0px'>"+selectedVenue.name+"</div>"+
   "<div class='overzicht'>"+
             "<div class='infoBarIV' style='width:auto'>"+
-                    "<div style='width:78px;height:110px;float:left;padding:5px;'><img src='assets/images/attracties/"+selectedVenue.name+".png' style='max-height:100%;max-width:100%;'></div>"+
+                    "<div style='width:120px;height:150px;float:left;padding:5px;'><img src='assets/images/attracties/"+selectedVenue.name+".png' style='max-height:100%;max-width:100%;'></div>"+
                     "<p>"+selectedVenue.adress+"</p>"+
                     "<p>"+selectedVenue.description+"</p>"+
            "</div>"+
