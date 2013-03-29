@@ -198,6 +198,33 @@ function callback(response, status) {
         var distance = elementje.distance.text;
         allVenues[j].distance = distance;
         allVenues[j].distanceVal = elementje.distance.value;
+        switch(allVenues[j].cat){
+          case "1":
+            allVenues[j].categoryTekst = "Proeven";
+          break;
+
+          case "2":
+            allVenues[j].categoryTekst = "Zien";
+
+          break;
+
+          case "3":
+            allVenues[j].categoryTekst = "Ruiken";
+
+          break;
+
+          case "4":
+            allVenues[j].categoryTekst = "Voelen";
+
+          break;
+
+          case "5":
+            allVenues[j].categoryTekst = "Horen";
+
+          break;
+        }
+
+
         var duration = elementje.duration.text;
         var from = origins[i];
         var to = destinations[j];
@@ -206,6 +233,7 @@ function callback(response, status) {
     }
   }
   console.log(allVenues);
+
   allVenues.sort(function(a,b) { return parseFloat(a.distanceVal) - parseFloat(b.distanceVal) } );
   console.log(allVenues);
   for(var i=0;i<5;i++){
@@ -294,6 +322,7 @@ function navigate(){
             console.log(element);
             if(element.categoryTekst==undefined){
               element.categoryTekst = $(this).text();
+              allVenues[i] = element;
             }
             currentVenues.push(element);
             
@@ -302,6 +331,7 @@ function navigate(){
       console.log(currentVenues);
       changeDisplay();
     }
+
   
         return false;
     
@@ -385,8 +415,8 @@ function showDetailPage(){
   console.log("Click on title");
   var item= "<div class='detailPage' style='background-color:#525263;position:absolute;z-index:"+currentZIndex+";'><div id='vorige' class='terugBtn'>Terug</div><div class='info' style='width:78%;padding-top:0px'>"+selectedVenue.name+"</div>"+
   "<div class='overzicht'>"+
-            "<div class='infoBarIV' style='float:right;'>"+
-                    
+            "<div class='infoBarIV' style='width:auto'>"+
+                    "<img src='assets/images/attracties/"+selectedVenue.name+".png' style='float:left;padding:5px'width=140>"+
                     "<p>"+selectedVenue.adress+"</p>"+
                     "<p>"+selectedVenue.description+"</p>"+
            "</div>"+
@@ -560,7 +590,7 @@ function updateDagTripCount(){
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; background-color:#2a2b3c;width:100%;height:100%'>";
+  var item = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; background-color:#2a2b3c;width:100%;min-height:550px'>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   currentZIndex++;
   
