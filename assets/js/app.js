@@ -609,6 +609,7 @@ function showDagTrip(){
 
   for(var i=0;i<favorites.length;i++){
     var element = favorites[i];
+      console.log(element);
 
     var itemke="<div class='dagtripItem' id='dagTripItemKe"+element.id+"'>"+
     "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+element.categoryTekst+".png' width=100%></div>"+
@@ -619,7 +620,7 @@ function showDagTrip(){
     $('#dagTripItemKe'+element.id).click(function(){
       console.log("Click on element uit lijst");
       selectedVenue = element;
-      console.log(element);
+      console.log($(this));
       showDetailPage();
     })
   }
