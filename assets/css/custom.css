@@ -170,15 +170,15 @@ h1{
       width: 21%;
       height: 60px;
       font-size: 0.76em;
-      font-weight: 700;
       text-align: center;
-      color: #ffd597;
-      line-height: 60px;
+      color: #fbffd1;
+      line-height: 38px;
+      padding-left: 3px;
       background-image: url("../images/backBtn.png");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 55px;
-
+      font-weight: 400;
     }
 
 .boottrip{
