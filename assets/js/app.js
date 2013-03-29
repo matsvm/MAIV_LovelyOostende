@@ -595,32 +595,32 @@ function updateDagTripCount(){
 }
 function showDagTrip(){
   console.log("Show dagtrip");
-  var item = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; background-color:#2a2b3c;width:100%;min-height:550px'>";
+  var itemMenu = "<div id='dagTripDiv' style='z-index:"+currentZIndex+";position:absolute; background-color:#2a2b3c;width:100%;min-height:550px'>";
   var favorites = JSON.parse(localStorage.getItem('favorites'));
   currentZIndex++;
   
 
-  item+="<div class='miniBtn' id='verrasMij'>Verras mij</div>";
-  item+="<div class='miniBtn' id='maakLeeg'>Leegmaken</div>";
+  itemMenu+="<div class='miniBtn' id='verrasMij'>Verras mij</div>";
+  itemMenu+="<div class='miniBtn' id='maakLeeg'>Leegmaken</div>";
   
-  item +=" </div>";
+  itemMenu +=" </div>";
 
-  $('body').prepend(item);
+  $('body').prepend(itemMenu);
 
   for(var i=0;i<favorites.length;i++){
-    var element = favorites[i];
-      console.log(element);
-
-    var itemke="<div class='dagtripItem' id='dagTripItemKe"+element.id+"'>"+
-    "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+element.categoryTekst+".png' width=100%></div>"+
-    "<div class='dagtripTitel'><h2>"+ element.name+"</h2><p>"+ element.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
-    "<div class='dagtripColor' style='background-color:"+element.catColor+"'></div>"+
+    var favElement = favorites[i];
+      console.log(favElement);
+      console.log(favorites);
+    var itemke="<div class='dagtripItem' id='dagTripItemTje"+favElement.id+"'>"+
+      "<div class='dagtripIcontje'><img src='assets/images/dagtripIcons/dagtrip"+favElement.categoryTekst+".png' width=100%></div>"+
+      "<div class='dagtripTitel'><h2>"+favElement.name+"</h2><p>"+favElement.adress+"</p></div><div class='infoBarArrowTrip'><img src='assets/images/arrow.png' width='40'></div>"+
+      "<div class='dagtripColor' style='background-color:"+favElement.catColor+"'></div>"+
     "</div>";
     $("#dagTripDiv").prepend(itemke);
-    $('#dagTripItemKe'+element.id).click(function(){
+    $('#dagTripItemTje'+favElement.id).click(function(){
       console.log("Click on element uit lijst");
-      selectedVenue = element;
-      console.log($(this));
+      selectedVenue = favElement;
+      console.log(favElement);
       showDetailPage();
     })
   }
@@ -630,13 +630,13 @@ function showDagTrip(){
 
 
 
-  item = "<div class='terugBtn' style='float:none;' id='keerTerug'>Terug</div>";
+  itemMenu = "<div class='terugBtn' style='float:none;' id='keerTerug'>Terug</div>";
 
-  item+= "<div id='oranjeZee' style='width:0%;background-image:url(assets/images/golfBeige.png);' class='boottrip'>"+
+  itemMenu+= "<div id='oranjeZee' style='width:0%;background-image:url(assets/images/golfBeige.png);' class='boottrip'>"+
     "<img id='deBoot' src='assets/images/boot.png' style='visibility:hidden;' width='28.5'></div>"+
     "<div id='blauweZee' style='width:"+maxWidth+"% ;margin-left:0; ' class='boottrip'>"+
   "<img id='deBoot' src='assets/images/boot.png' width='28.5' ></div>";
-  $("#dagTripDiv").prepend(item);
+  $("#dagTripDiv").prepend(itemMenu);
 
 
   setTimeout(function(){
