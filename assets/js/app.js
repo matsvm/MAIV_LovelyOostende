@@ -24,6 +24,7 @@ $(document).ready(init);
         '<div id="ramdomTrip" class="btn small">ok, verras ons ! </div>'+
     '</div></div>';
   $("body").prepend(homeScreen);
+if(window.navigator.standalone==false){
 
 var tip="<div class='tip start'><div id='popUp'>"+
   "<div class='roundedPopup roundedPopupMini'><p>TIP</p></div>"+
@@ -43,6 +44,8 @@ $("body").prepend(tip);
 
     $(".tip").remove()
   },6000);
+
+}
   $("#removeHomeScreen").click(function(){
       $(this).parent().remove();
 
@@ -289,10 +292,14 @@ function navigate(){
           var element = allVenues[i];
           if(element.cat == key){
             console.log(element);
+            if(element.categoryTekst==undefined){
+              element.categoryTekst = $(this).text();
+            }
             currentVenues.push(element);
             
           }
       }
+      console.log(currentVenues);
       changeDisplay();
     }
   
@@ -318,7 +325,7 @@ function clickVenuehandler(){
         selectedVenue = element;
         $("#venue"+selectedVenue.id+" img").attr('src',"assets/images/attracties/proeven/"+element.name+"-touched.png");
         $("#venue"+selectedVenue.id).addClass('up');
-        var item= "<div class='infoBarIII'>FOTO</div><div class='showDetail'><div class='infoBarIV'><h2>"+element.name+"</h2><p>"+element.adress+"</p></div><div class='infoBarArrow'><img src='assets/images/arrow.png' width='40'></div></div>";
+        var item= "<div class='infoBarIII'><img src='assets/images/dagtripIcons/dagtrip"+element.categoryTekst+".png' width=100%></div><div class='showDetail'><div class='infoBarIV'><h2>"+element.name+"</h2><p>"+element.adress+"</p></div><div class='infoBarArrow'><img src='assets/images/arrow.png' width='40'></div></div>";
 //            <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div><div class='infoBarItem'><h3 class='showDetail'>"+element.name+"</h3><p class='showDetail'>"+element.adress+"</p></div>";
         var favorites = JSON.parse(localStorage.getItem('favorites'));
 
