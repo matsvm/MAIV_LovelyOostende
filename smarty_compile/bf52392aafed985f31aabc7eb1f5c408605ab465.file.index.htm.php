@@ -1,4 +1,29 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 09:00:38
+         compiled from "smarty_template/index.htm" */ ?>
+<?php /*%%SmartyHeaderCode:82030656051554a262f0724-42795551%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
+    array (
+      0 => 'smarty_template/index.htm',
+      1 => 1364543890,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '82030656051554a262f0724-42795551',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'content' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.8',
+  'unifunc' => 'content_51554a262f9fb1_26131051',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_51554a262f9fb1_26131051')) {function content_51554a262f9fb1_26131051($_smarty_tpl) {?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -41,14 +66,22 @@
             <!--<div class="infoBarIII">FOTO</div>
             <div class="infoBarIV"><h2>De vuurtoren</h2><p>Straatnaam 432 Oostende</p></div>
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="17"></div>
-            <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>
+            <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
+<<<<<<< HEAD
+<<<<<<< HEAD
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="40"></div>
-            <div class="infoBarArrow"><img src="assets/images/arrow.png" width="40"></div>
+=======
+            <!--<div class="infoBarArrow"><img src="assets/images/arrow.png" width="40"></div>
+>>>>>>> extra
             <div class="terugBtn"><p>TERUG</p></div>
+=======
+>>>>>>> update
+
             <div class="boottrip"><img  id="deBoot" src="assets/images/boot.png" width="28.5"></div>-->
 
-        {$content}
+        <?php echo $_smarty_tpl->tpl_vars['content']->value;?>
+
     </div>
     <ul class="tiles">
         
@@ -66,3 +99,4 @@
 </body>
 
 </html>
+<?php }} ?>
