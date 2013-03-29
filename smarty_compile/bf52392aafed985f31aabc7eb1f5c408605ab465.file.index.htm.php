@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 07:52:40
+<?php /* Smarty version Smarty-3.1.8, created on 2013-03-29 08:16:48
          compiled from "smarty_template/index.htm" */ ?>
 <?php /*%%SmartyHeaderCode:1733290144515501f1439af8-30822205%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bf52392aafed985f31aabc7eb1f5c408605ab465' => 
     array (
       0 => 'smarty_template/index.htm',
-      1 => 1364539954,
+      1 => 1364541403,
       2 => 'file',
     ),
   ),
@@ -68,7 +68,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="infoBarArrow"><img src="assets/images/arrow.png" width="17"></div>
             <div class="infoBarV"><div class="Minibutten"> + toevoegen aan dagtrip</div></div>-->
 
-            <div class="infoBarArrow"><img src="assets/images/arrow.png" width="28"></div>
+            <div class="infoBarArrow"><img src="assets/images/arrow.png" width="40"></div>
             <div class="terugBtn"><p>TERUG</p></div>
 
             <div class="boottrip"><img  id="deBoot" src="assets/images/boot.png" width="28.5"></div>
